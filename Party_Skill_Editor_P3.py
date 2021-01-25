@@ -181,16 +181,16 @@ if junpeiLvl != 0:
     pnach.write(
         "\n\n//Junpei skills \n//Junpei Persona Skill 1\npatch=1,EE,10834B24,extended,00000" + partySkills.junSkills[0])
     if len(partySkills.junSkills) > 1:
-        pnach.write("\n//Junpei Persona Skill 2\npatch=1,EE,10834B26,extended,00000" + partySkills.junSkills[1])
+        pnach.write("\n//Junpei Persona Skill 2\npatch=1,EE,00834B26,extended,00000" + partySkills.junSkills[1])
     if len(partySkills.junSkills) > 2:
-        pnach.write("\n//Junpei Persona Skill 3\npatch=1,EE,10834B28,extended,00000" + partySkills.junSkills[2])
+        pnach.write("\n//Junpei Persona Skill 3\npatch=1,EE,00834B28,extended,00000" + partySkills.junSkills[2])
     if len(partySkills.junSkills) > 3:
-        pnach.write("\n//Junpei Persona Skill 4\npatch=1,EE,10834B2A,extended,00000" + partySkills.junSkills[3])
+        pnach.write("\n//Junpei Persona Skill 4\npatch=1,EE,00834B2A,extended,00000" + partySkills.junSkills[3])
     if len(partySkills.junSkills) > 4:
-        pnach.write("\n//Junpei Persona Skill 5\npatch=1,EE,10834B2C,extended,00000" + partySkills.junSkills[4])
+        pnach.write("\n//Junpei Persona Skill 5\npatch=1,EE,00834B2C,extended,00000" + partySkills.junSkills[4])
     if len(partySkills.junSkills) > 5:
-        pnach.write("\n//Junpei Persona Skill 6\npatch=1,EE,10834B2E,extended,00000" + partySkills.junSkills[5])
+        pnach.write("\n//Junpei Persona Skill 6\npatch=1,EE,00834B2E,extended,00000" + partySkills.junSkills[5])
     if len(partySkills.junSkills) > 6:
-        pnach.write("\n//Junpei Persona Skill 7\npatch=1,EE,10834B30,extended,00000" + partySkills.junSkills[6])
+        pnach.write("\n//Junpei Persona Skill 7\npatch=1,EE,00834B30,extended,00000" + partySkills.junSkills[6])
     if len(partySkills.junSkills) > 7:
-        pnach.write("\n//Junpei Persona Skill 8\npatch=1,EE,10834B32,extended,00000" + partySkills.junSkills[7])
+        pnach.write("\n//Junpei Persona Skill 8\npatch=1,EE,00834B32,extended,00000" + partySkills.junSkills[7])
