@@ -1,3 +1,4 @@
+#Vanilla skills
 Agi	= "001"
 Agilao	= "002"
 Agidyne	= "003"
@@ -226,3 +227,25 @@ Last_Judge	=	"11F"
 Raktapaksha	=	"120"
 Justice	=	"121"
 Trickster2	=	"122"
+
+#Vanilla passives (only the used ones)
+Fire_Boost = "210"
+Fire_Amp = "211"
+Ice_Boost = "212"
+Ice_Amp = "213"
+Elec_Boost = "214"
+Elec_Amp = "215"
+Counter = "220"
+Counterstrike = "221"
+High_Counter = "222"
+Regenerate1 = "223"
+Regenerate2 = "224"
+Regenerate3 = "225" #used in New Moon
+Apt_Pupil = "232" #used in New Moon
+Magic_Skill_Up = "23E" #used in New Moon
+Phys_Skill_Up = "23F" #used in New Moon
+Spear_Master = "246"
+Fist_Master = "24A"
+Hama_Boost = "257"
+Mudo_Boost = "258"
+Spring_of_Life = "25F"
