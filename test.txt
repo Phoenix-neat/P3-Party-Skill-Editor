@@ -1,0 +1,17 @@
+//Yukari skills 
+//Yukari Persona Skill 1
+patch=1,EE,108340F8,extended,000000ED
+//Yukari Persona Skill 2
+patch=1,EE,108340FA,extended,000000C2
+//Yukari Persona Skill 3
+patch=1,EE,108340FC,extended,000000CB
+//Yukari Persona Skill 4
+patch=1,EE,108340FE,extended,0000000C
+//Yukari Persona Skill 5
+patch=1,EE,10834100,extended,000000E7
+//Yukari Persona Skill 6
+patch=1,EE,10834102,extended,0000000F
+//Yukari Persona Skill 7
+patch=1,EE,10834104,extended,000000CD
+//Yukari Persona Skill 8
+patch=1,EE,10834106,extended,000000C5
