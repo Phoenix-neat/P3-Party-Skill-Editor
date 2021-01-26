@@ -28,11 +28,13 @@ if gameCheck in ["J", "j"]:
 elif gameCheck in ["A", "a"]:
     metisLvl = int(input("Metis: "))
 
+# Creates/ overwrites the pnach file
 overwrite = open("test.txt", "w")
 overwrite.write("")
 pnach = open("test.txt", "a")
 
-# for Yukari (All, includes New Moon J/A and Vanilla J/A)
+# Yukari
+# Removes skills from the list depending on what level is inputted. Maximum of eight skills at any level
 if yukariLvl != 0:
     if newMoonCheck in ["F", "f"]:
         partySkills.yukSkills.remove(skillID.Amrita)
@@ -79,23 +81,7 @@ if yukariLvl != 0:
     if yukariLvl < 74:
         partySkills.yukSkills.remove(skillID.Mediarahan)
 
-#    pnach.write(
-#        "//Yukari skills \n//Yukari Persona Skill 1\npatch=1,EE,108340F8,short,0" + partySkills.yukSkills[0])
-#    if len(partySkills.yukSkills) > 1:
-#        pnach.write("\n//Yukari Persona Skill 2\npatch=1,EE,008340FA,short,0" + partySkills.yukSkills[1])
-#    if len(partySkills.yukSkills) > 2:
-#        pnach.write("\n//Yukari Persona Skill 3\npatch=1,EE,008340FC,short,0" + partySkills.yukSkills[2])
-#    if len(partySkills.yukSkills) > 3:
-#        pnach.write("\n//Yukari Persona Skill 4\npatch=1,EE,008340FE,short,0" + partySkills.yukSkills[3])
-#    if len(partySkills.yukSkills) > 4:
-#        pnach.write("\n//Yukari Persona Skill 5\npatch=1,EE,00834100,short,0" + partySkills.yukSkills[4])
-#    if len(partySkills.yukSkills) > 5:
-#        pnach.write("\n//Yukari Persona Skill 6\npatch=1,EE,00834102,short,0" + partySkills.yukSkills[5])
-#    if len(partySkills.yukSkills) > 6:
-#        pnach.write("\n//Yukari Persona Skill 7\npatch=1,EE,00834104,short,0" + partySkills.yukSkills[6])
-#    if len(partySkills.yukSkills) > 7:
-#        pnach.write("\n//Yukari Persona Skill 8\npatch=1,EE,00834106,short,0" + partySkills.yukSkills[7])
-
+#   Writes the first (and only) eight skills to the file
     count = 0
     while count < len(partySkills.yukSkills):
         if count == 0:
@@ -104,7 +90,7 @@ if yukariLvl != 0:
                     format(8601848 + (count * 2), "x") + ",short,0" + partySkills.yukSkills[count])
         count += 1
 
-# for Junpei
+# Junpei
 if junpeiLvl != 0:
     if SoLCheck not in ["Y", "y"]:
         partySkills.junSkills.remove(skillID.Spring_of_Life)
@@ -186,23 +172,6 @@ if junpeiLvl != 0:
     if junpeiLvl < 65:
         partySkills.junSkills.remove(skillID.Brave_Blade)
 
-#    pnach.write(
-#       "\n\n//Junpei skills \n//Junpei Persona Skill 1\npatch=1,EE,10834B24,extended,00000" + partySkills.junSkills[0])
-#    if len(partySkills.junSkills) > 1:
-#        pnach.write("\n//Junpei Persona Skill 2\npatch=1,EE,00834B26,short,00000" + partySkills.junSkills[1])
-#    if len(partySkills.junSkills) > 2:
-#        pnach.write("\n//Junpei Persona Skill 3\npatch=1,EE,00834B28,short,00000" + partySkills.junSkills[2])
-#    if len(partySkills.junSkills) > 3:
-#        pnach.write("\n//Junpei Persona Skill 4\npatch=1,EE,00834B2A,short,00000" + partySkills.junSkills[3])
-#    if len(partySkills.junSkills) > 4:
-#        pnach.write("\n//Junpei Persona Skill 5\npatch=1,EE,00834B2C,extended,00000" + partySkills.junSkills[4])
-#    if len(partySkills.junSkills) > 5:
-#        pnach.write("\n//Junpei Persona Skill 6\npatch=1,EE,00834B2E,extended,00000" + partySkills.junSkills[5])
-#    if len(partySkills.junSkills) > 6:
-#        pnach.write("\n//Junpei Persona Skill 7\npatch=1,EE,00834B30,extended,00000" + partySkills.junSkills[6])
-#    if len(partySkills.junSkills) > 7:
-#        pnach.write("\n//Junpei Persona Skill 8\npatch=1,EE,00834B32,extended,00000" + partySkills.junSkills[7])
-
     count = 0
     while count < len(partySkills.junSkills):
         if count == 0:
@@ -210,3 +179,11 @@ if junpeiLvl != 0:
         pnach.write("\n//Junpei Persona Skill " + (str(count + 1).upper()) + "\npatch=1,EE,00" +
                     format(8604452 + (count * 2), "x") + ",short,0" + partySkills.junSkills[count])
         count += 1
+
+#   Akihiko
+if junpeiLvl != 0:
+    if newMoonCheck in ["F", "f"]:
+        partySkills.akiSkills.remove(skillID.Debilitate)
+        partySkills.akiSkills.remove(skillID.Thunder_Reign)
+    if newMoonCheck in ["M", "m"]:
+        partySkills.akiSkills.remove(skillID.Masukunda)
