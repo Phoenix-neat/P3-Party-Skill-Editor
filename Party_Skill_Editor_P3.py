@@ -14,10 +14,9 @@ if gameCheck not in ["J", "j", "A", "a"]:
     raise SystemExit
 
 # checks the level for each party member
-print("Enter in the levels of each party member. If you do not have the party member, enter '0'")
+print("Enter the level of each party member. If you do not have the member, or want to skip them, enter '0'")
 yukariLvl = int(input("Yukari: "))
 junpeiLvl = int(input("Junpei: "))
-SoLCheck = input("Does Junpei have 'Spring of Life'? Type 'y' if so: ")
 akihikoLvl = int(input("Akihiko: "))
 mitsuruLvl = int(input("Mitsuru: "))
 aigisLvl = int(input("Aigis: "))
@@ -29,9 +28,9 @@ elif gameCheck in ["A", "a"]:
     metisLvl = int(input("Metis: "))
 
 # Creates/ overwrites the pnach file
-overwrite = open("test.txt", "w")
+overwrite = open("94A82AAA_partySkills.pnach", "w")
 overwrite.write("")
-pnach = open("test.txt", "a")
+pnach = open("94A82AAA_partySkills.pnach", "a")
 
 # Yukari
 # Removes skills from the list depending on what level is inputted. Maximum of eight skills at any level
@@ -92,6 +91,7 @@ if yukariLvl != 0:
 
 # Junpei
 if junpeiLvl != 0:
+    SoLCheck = input("Does Junpei have 'Spring of Life'? Type 'y' if so: ")
     if SoLCheck not in ["Y", "y"]:
         partySkills.junSkills.remove(skillID.Spring_of_Life)
 
@@ -181,9 +181,117 @@ if junpeiLvl != 0:
         count += 1
 
 #   Akihiko
-if junpeiLvl != 0:
+if akihikoLvl != 0:
     if newMoonCheck in ["F", "f"]:
         partySkills.akiSkills.remove(skillID.Debilitate)
         partySkills.akiSkills.remove(skillID.Thunder_Reign)
+        if akihikoLvl < 53:
+            partySkills.akiSkills.remove(skillID.Ziodyne)
+        if akihikoLvl < 66:
+            partySkills.akiSkills.remove(skillID.Masukunda)
     if newMoonCheck in ["M", "m"]:
         partySkills.akiSkills.remove(skillID.Masukunda)
+        if akihikoLvl not in range(53, 79):
+            partySkills.akiSkills.remove(skillID.Ziodyne)
+        if akihikoLvl < 66:
+            partySkills.akiSkills.remove(skillID.Debilitate)
+
+    if akihikoLvl >= 50:
+        partySkills.akiSkills.remove(skillID.Sonic_Punch)
+    if akihikoLvl >= 29:
+        partySkills.akiSkills.remove(skillID.Zio)
+    if akihikoLvl >= 38:
+        partySkills.akiSkills.remove(skillID.Dia)
+    if akihikoLvl not in range(16, 46):
+        partySkills.akiSkills.remove(skillID.Tarunda)
+    if akihikoLvl not in range(21, 40):
+        partySkills.akiSkills.remove(skillID.Mazio)
+    if akihikoLvl not in range(25, 56):
+        partySkills.akiSkills.remove(skillID.Rakunda)
+    if akihikoLvl not in range(29, 52):
+        partySkills.akiSkills.remove(skillID.Zionga)
+    if akihikoLvl not in range(33, 65):
+        partySkills.akiSkills.remove(skillID.Sukunda)
+    if akihikoLvl not in range(37, 75):
+        partySkills.akiSkills.remove(skillID.Elec_Boost)
+    if akihikoLvl not in range(38, 64):
+        partySkills.akiSkills.remove(skillID.Diarama)
+    if akihikoLvl not in range(41, 73):
+        partySkills.akiSkills.remove(skillID.Mazionga)
+    if akihikoLvl < 47:
+        partySkills.akiSkills.remove(skillID.Matarunda)
+    if akihikoLvl < 50:
+        partySkills.akiSkills.remove(skillID.Fist_Master)
+    if akihikoLvl < 57:
+        partySkills.akiSkills.remove(skillID.Marakunda)
+    if akihikoLvl < 65:
+        partySkills.akiSkills.remove(skillID.Diarahan)
+    if akihikoLvl < 74:
+        partySkills.akiSkills.remove(skillID.Maziodyne)
+    if akihikoLvl < 76:
+        partySkills.akiSkills.remove(skillID.Elec_Amp)
+
+    count = 0
+    while count < len(partySkills.akiSkills):
+        if count == 0:
+            pnach.write("\n\n//Akihiko skills")
+        pnach.write("\n//Akihiko Persona Skill " + (str(count + 1).upper()) + "\npatch=1,EE,00" +
+                    format(8606188 + (count * 2), "x") + ",short,0" + partySkills.akiSkills[count])
+        count += 1
+
+# Mitsuru
+if mitsuruLvl != 0:
+    if newMoonCheck in ["F", "f"]:
+        partySkills.mitSkills.remove(skillID.Niflheim)
+        if mitsuruLvl < 55:
+            partySkills.mitSkills.remove(skillID.Bufudyne)
+    if newMoonCheck in ["M", "m"]:
+        if mitsuruLvl not in range(55, 79):
+            partySkills.mitSkills.remove(skillID.Bufudyne)
+        if mitsuruLvl < 80:
+            partySkills.mitSkills.remove(skillID.Niflheim)
+
+    if mitsuruLvl >= 21:
+        partySkills.mitSkills.remove(skillID.Bufu)
+    if mitsuruLvl >= 42:
+        partySkills.mitSkills.remove(skillID.Mabufu)
+    if mitsuruLvl >= 25:
+        partySkills.mitSkills.remove(skillID.Dia)
+    if mitsuruLvl >= 50:
+        partySkills.mitSkills.remove(skillID.Marin_Karin)
+    if mitsuruLvl not in range(21, 41):
+        partySkills.mitSkills.remove(skillID.Bufula)
+    if mitsuruLvl not in range(25, 57):
+        partySkills.mitSkills.remove(skillID.Diarama)
+    if mitsuruLvl < 27:
+        partySkills.mitSkills.remove(skillID.Spirit_Drain)
+    if mitsuruLvl < 32:
+        partySkills.mitSkills.remove(skillID.Tentarafoo)
+    if mitsuruLvl not in range(42, 70):
+        partySkills.mitSkills.remove(skillID.Mabufula)
+    if mitsuruLvl not in range(45, 75):
+        partySkills.mitSkills.remove(skillID.Ice_Boost)
+    if mitsuruLvl < 50:
+        partySkills.mitSkills.remove(skillID.Mind_Charge)
+    if mitsuruLvl < 58:
+        partySkills.mitSkills.remove(skillID.Diarahan)
+    if mitsuruLvl < 61:
+        partySkills.mitSkills.remove(skillID.Ice_Break)
+    if mitsuruLvl < 71:
+        partySkills.mitSkills.remove(skillID.Mabufudyne)
+    if mitsuruLvl < 76:
+        partySkills.mitSkills.remove(skillID.Ice_Amp)
+
+    count = 0
+    while count < len(partySkills.mitSkills):
+        if count == 0:
+            pnach.write("\n\n//Mitsuru skills")
+        pnach.write("\n//Mitsuru Persona Skill " + (str(count + 1).upper()) + "\npatch=1,EE,00" +
+                    format(8603584 + (count * 2), "x") + ",short,0" + partySkills.mitSkills[count])
+        count += 1
+
+# Aigis
+
+
+# closing message
+print("Done! Place in your cheats folder.")

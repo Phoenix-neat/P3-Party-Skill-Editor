@@ -1,0 +1,53 @@
+//Yukari skills
+//Yukari Persona Skill 1
+patch=1,EE,008340f8,short,00ED
+//Yukari Persona Skill 2
+patch=1,EE,008340fa,short,00C2
+//Yukari Persona Skill 3
+patch=1,EE,008340fc,short,00CB
+//Yukari Persona Skill 4
+patch=1,EE,008340fe,short,00E7
+//Yukari Persona Skill 5
+patch=1,EE,00834100,short,000F
+//Yukari Persona Skill 6
+patch=1,EE,00834102,short,00CD
+//Yukari Persona Skill 7
+patch=1,EE,00834104,short,00C5
+//Yukari Persona Skill 8
+patch=1,EE,00834106,short,0012
+
+//Akihiko skills
+//Akihiko Persona Skill 1
+patch=1,EE,008351ec,short,00CF
+//Akihiko Persona Skill 2
+patch=1,EE,008351ee,short,024A
+//Akihiko Persona Skill 3
+patch=1,EE,008351f0,short,00D3
+//Akihiko Persona Skill 4
+patch=1,EE,008351f2,short,00C2
+//Akihiko Persona Skill 5
+patch=1,EE,008351f4,short,00F0
+//Akihiko Persona Skill 6
+patch=1,EE,008351f6,short,0021
+//Akihiko Persona Skill 7
+patch=1,EE,008351f8,short,0215
+//Akihiko Persona Skill 8
+patch=1,EE,008351fa,short,0024
+
+//Mitsuru skills
+//Mitsuru Persona Skill 1
+patch=1,EE,008347c0,short,004C
+//Mitsuru Persona Skill 2
+patch=1,EE,008347c2,short,003E
+//Mitsuru Persona Skill 3
+patch=1,EE,008347c4,short,00DD
+//Mitsuru Persona Skill 4
+patch=1,EE,008347c6,short,00C2
+//Mitsuru Persona Skill 5
+patch=1,EE,008347c8,short,00E6
+//Mitsuru Persona Skill 6
+patch=1,EE,008347ca,short,0018
+//Mitsuru Persona Skill 7
+patch=1,EE,008347cc,short,0213
+//Mitsuru Persona Skill 8
+patch=1,EE,008347ce,short,001B
