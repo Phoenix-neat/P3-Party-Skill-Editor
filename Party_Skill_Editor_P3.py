@@ -1,19 +1,19 @@
 import skillID
 import partySkills
 
-#checks if for vanilla FES or New Moon
+# checks if for vanilla FES or New Moon
 newMoonCheck = input("Type 'F' for unmodded Persona 3 FES, or 'M' for Persona 3 FES with the New Moon Balance Patch: ")
 if newMoonCheck not in ["F", "f", "M", "m"]:
     errorMessage = input("Invalid response. Only 'F' and 'M' are acceptable")
     raise SystemExit
 
-#checks if for The Journey or The Answer
+# checks if for The Journey or The Answer
 gameCheck = input("Type 'J' for The Journey, or 'A' for The Answer: ")
 if gameCheck not in ["J", "j", "A", "a"]:
     errorMessage = input("Invalid response. Only 'J' and 'A' are acceptable")
     raise SystemExit
 
-#checks the level for each party member
+# checks the level for each party member
 print("Enter in the levels of each party member. If you do not have the party member, enter '0'")
 yukariLvl = int(input("Yukari: "))
 junpeiLvl = int(input("Junpei: "))
@@ -23,7 +23,7 @@ mitsuruLvl = int(input("Mitsuru: "))
 aigisLvl = int(input("Aigis: "))
 koromaruLvl = int(input("Koromaru: "))
 kenLvl = int(input("Ken: "))
-if gameCheck in  ["J", "j"]:
+if gameCheck in ["J", "j"]:
     shinjiroLvl = int(input("Shinjiro: "))
 elif gameCheck in ["A", "a"]:
     metisLvl = int(input("Metis: "))
@@ -32,7 +32,7 @@ overwrite = open("test.txt", "w")
 overwrite.write("")
 pnach = open("test.txt", "a")
 
-#for Yukari (All, includes New Moon J/A and Vanilla J/A)
+# for Yukari (All, includes New Moon J/A and Vanilla J/A)
 if yukariLvl != 0:
     if newMoonCheck in ["F", "f"]:
         partySkills.yukSkills.remove(skillID.Amrita)
@@ -79,24 +79,32 @@ if yukariLvl != 0:
     if yukariLvl < 74:
         partySkills.yukSkills.remove(skillID.Mediarahan)
 
-    pnach.write(
-        "//Yukari skills \n//Yukari Persona Skill 1\npatch=1,EE,108340F8,short,0" + partySkills.yukSkills[0])
-    if len(partySkills.yukSkills) > 1:
-        pnach.write("\n//Yukari Persona Skill 2\npatch=1,EE,008340FA,short,0" + partySkills.yukSkills[1])
-    if len(partySkills.yukSkills) > 2:
-        pnach.write("\n//Yukari Persona Skill 3\npatch=1,EE,008340FC,short,0" + partySkills.yukSkills[2])
-    if len(partySkills.yukSkills) > 3:
-        pnach.write("\n//Yukari Persona Skill 4\npatch=1,EE,008340FE,short,0" + partySkills.yukSkills[3])
-    if len(partySkills.yukSkills) > 4:
-        pnach.write("\n//Yukari Persona Skill 5\npatch=1,EE,00834100,short,0" + partySkills.yukSkills[4])
-    if len(partySkills.yukSkills) > 5:
-        pnach.write("\n//Yukari Persona Skill 6\npatch=1,EE,00834102,short,0" + partySkills.yukSkills[5])
-    if len(partySkills.yukSkills) > 6:
-        pnach.write("\n//Yukari Persona Skill 7\npatch=1,EE,00834104,short,0" + partySkills.yukSkills[6])
-    if len(partySkills.yukSkills) > 7:
-        pnach.write("\n//Yukari Persona Skill 8\npatch=1,EE,00834106,short,0" + partySkills.yukSkills[7])
+#    pnach.write(
+#        "//Yukari skills \n//Yukari Persona Skill 1\npatch=1,EE,108340F8,short,0" + partySkills.yukSkills[0])
+#    if len(partySkills.yukSkills) > 1:
+#        pnach.write("\n//Yukari Persona Skill 2\npatch=1,EE,008340FA,short,0" + partySkills.yukSkills[1])
+#    if len(partySkills.yukSkills) > 2:
+#        pnach.write("\n//Yukari Persona Skill 3\npatch=1,EE,008340FC,short,0" + partySkills.yukSkills[2])
+#    if len(partySkills.yukSkills) > 3:
+#        pnach.write("\n//Yukari Persona Skill 4\npatch=1,EE,008340FE,short,0" + partySkills.yukSkills[3])
+#    if len(partySkills.yukSkills) > 4:
+#        pnach.write("\n//Yukari Persona Skill 5\npatch=1,EE,00834100,short,0" + partySkills.yukSkills[4])
+#    if len(partySkills.yukSkills) > 5:
+#        pnach.write("\n//Yukari Persona Skill 6\npatch=1,EE,00834102,short,0" + partySkills.yukSkills[5])
+#    if len(partySkills.yukSkills) > 6:
+#        pnach.write("\n//Yukari Persona Skill 7\npatch=1,EE,00834104,short,0" + partySkills.yukSkills[6])
+#    if len(partySkills.yukSkills) > 7:
+#        pnach.write("\n//Yukari Persona Skill 8\npatch=1,EE,00834106,short,0" + partySkills.yukSkills[7])
 
-#for Junpei
+    count = 0
+    while count < len(partySkills.yukSkills):
+        if count == 0:
+            pnach.write("//Yukari skills")
+        pnach.write("\n//Yukari Persona Skill " + (str(count + 1)).upper() + "\npatch=1,EE,00" +
+                    format(8601848 + (count * 2), "x") + ",short,0" + partySkills.yukSkills[count])
+        count += 1
+
+# for Junpei
 if junpeiLvl != 0:
     if SoLCheck not in ["Y", "y"]:
         partySkills.junSkills.remove(skillID.Spring_of_Life)
@@ -178,19 +186,27 @@ if junpeiLvl != 0:
     if junpeiLvl < 65:
         partySkills.junSkills.remove(skillID.Brave_Blade)
 
-    pnach.write(
-        "\n\n//Junpei skills \n//Junpei Persona Skill 1\npatch=1,EE,10834B24,extended,00000" + partySkills.junSkills[0])
-    if len(partySkills.junSkills) > 1:
-        pnach.write("\n//Junpei Persona Skill 2\npatch=1,EE,00834B26,extended,00000" + partySkills.junSkills[1])
-    if len(partySkills.junSkills) > 2:
-        pnach.write("\n//Junpei Persona Skill 3\npatch=1,EE,00834B28,extended,00000" + partySkills.junSkills[2])
-    if len(partySkills.junSkills) > 3:
-        pnach.write("\n//Junpei Persona Skill 4\npatch=1,EE,00834B2A,extended,00000" + partySkills.junSkills[3])
-    if len(partySkills.junSkills) > 4:
-        pnach.write("\n//Junpei Persona Skill 5\npatch=1,EE,00834B2C,extended,00000" + partySkills.junSkills[4])
-    if len(partySkills.junSkills) > 5:
-        pnach.write("\n//Junpei Persona Skill 6\npatch=1,EE,00834B2E,extended,00000" + partySkills.junSkills[5])
-    if len(partySkills.junSkills) > 6:
-        pnach.write("\n//Junpei Persona Skill 7\npatch=1,EE,00834B30,extended,00000" + partySkills.junSkills[6])
-    if len(partySkills.junSkills) > 7:
-        pnach.write("\n//Junpei Persona Skill 8\npatch=1,EE,00834B32,extended,00000" + partySkills.junSkills[7])
+#    pnach.write(
+#       "\n\n//Junpei skills \n//Junpei Persona Skill 1\npatch=1,EE,10834B24,extended,00000" + partySkills.junSkills[0])
+#    if len(partySkills.junSkills) > 1:
+#        pnach.write("\n//Junpei Persona Skill 2\npatch=1,EE,00834B26,short,00000" + partySkills.junSkills[1])
+#    if len(partySkills.junSkills) > 2:
+#        pnach.write("\n//Junpei Persona Skill 3\npatch=1,EE,00834B28,short,00000" + partySkills.junSkills[2])
+#    if len(partySkills.junSkills) > 3:
+#        pnach.write("\n//Junpei Persona Skill 4\npatch=1,EE,00834B2A,short,00000" + partySkills.junSkills[3])
+#    if len(partySkills.junSkills) > 4:
+#        pnach.write("\n//Junpei Persona Skill 5\npatch=1,EE,00834B2C,extended,00000" + partySkills.junSkills[4])
+#    if len(partySkills.junSkills) > 5:
+#        pnach.write("\n//Junpei Persona Skill 6\npatch=1,EE,00834B2E,extended,00000" + partySkills.junSkills[5])
+#    if len(partySkills.junSkills) > 6:
+#        pnach.write("\n//Junpei Persona Skill 7\npatch=1,EE,00834B30,extended,00000" + partySkills.junSkills[6])
+#    if len(partySkills.junSkills) > 7:
+#        pnach.write("\n//Junpei Persona Skill 8\npatch=1,EE,00834B32,extended,00000" + partySkills.junSkills[7])
+
+    count = 0
+    while count < len(partySkills.junSkills):
+        if count == 0:
+            pnach.write("\n\n//Junpei skills")
+        pnach.write("\n//Junpei Persona Skill " + (str(count + 1).upper()) + "\npatch=1,EE,00" +
+                    format(8604452 + (count * 2), "x") + ",short,0" + partySkills.junSkills[count])
+        count += 1
