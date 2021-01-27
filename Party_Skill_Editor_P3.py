@@ -2,7 +2,7 @@ import skillID
 import partySkills
 
 # checks if for vanilla FES or New Moon
-newMoonCheck = input("Type 'F' for unmodded Persona 3 FES, or 'M' for Persona 3 FES with the New Moon Balance Patch: ")
+newMoonCheck = input("Type 'F' for vanilla Persona 3 FES, or 'M' for Persona 3 FES with the New Moon Balance Patch: ")
 if newMoonCheck not in ["F", "f", "M", "m"]:
     errorMessage = input("Invalid response. Only 'F' and 'M' are acceptable")
     raise SystemExit
@@ -19,12 +19,13 @@ yukariLvl = int(input("Yukari: "))
 junpeiLvl = int(input("Junpei: "))
 akihikoLvl = int(input("Akihiko: "))
 mitsuruLvl = int(input("Mitsuru: "))
-aigisLvl = int(input("Aigis: "))
+if gameCheck in ["J", "j"]:
+    aigisLvl = int(input("Aigis: "))
 koromaruLvl = int(input("Koromaru: "))
 kenLvl = int(input("Ken: "))
 if gameCheck in ["J", "j"]:
     shinjiroLvl = int(input("Shinjiro: "))
-elif gameCheck in ["A", "a"]:
+if gameCheck in ["A", "a"]:
     metisLvl = int(input("Metis: "))
 
 # Creates/ overwrites the pnach file
@@ -291,7 +292,130 @@ if mitsuruLvl != 0:
         count += 1
 
 # Aigis
+if gameCheck in ["J", "j"]:
+    if aigisLvl != 0:
+        if newMoonCheck in ["F", "f"]:
+            partySkills.aigSkills.remove(skillID.Heat_Riser)
+            if aigisLvl < 47:
+                partySkills.aigSkills.remove(skillID.Masukukaja)
+        if newMoonCheck in ["M", "m"]:
+            partySkills.aigSkills.remove(skillID.Masukukaja)
+            if aigisLvl < 47:
+                partySkills.aigSkills.remove(skillID.Heat_Riser)
 
+        if aigisLvl >= 35:
+            partySkills.aigSkills.remove(skillID.Kill_Rush)
+        if aigisLvl >= 51:
+            partySkills.aigSkills.remove(skillID.Swift_Strike)
+        if aigisLvl >= 47:
+            partySkills.aigSkills.remove(skillID.Sukukaja)
+        if aigisLvl not in range(32, 55):
+            partySkills.aigSkills.remove(skillID.Rakukaja)
+        if aigisLvl not in range(35, 72):
+            partySkills.aigSkills.remove(skillID.Fatal_End)
+        if aigisLvl not in range(36, 59):
+            partySkills.aigSkills.remove(skillID.Tarukaja)
+        if aigisLvl < 42:
+            partySkills.aigSkills.remove(skillID.Dekunda)
+        if aigisLvl not in range(51, 76):
+            partySkills.aigSkills.remove(skillID.Heat_Wave)
+        if aigisLvl < 56:
+            partySkills.aigSkills.remove(skillID.Marakukaja)
+        if aigisLvl < 59:
+            partySkills.aigSkills.remove(skillID.Diarahan)
+        if aigisLvl < 60:
+            partySkills.aigSkills.remove(skillID.Matarukaja)
+        if aigisLvl < 65:
+            partySkills.aigSkills.remove(skillID.Samarecarm)
+        if aigisLvl < 73:
+            partySkills.aigSkills.remove(skillID.Akasha_Arts)
+        if aigisLvl < 77:
+            partySkills.aigSkills.remove(skillID.Gods_Hand)
+
+        count = 0
+        while count < len(partySkills.aigSkills):
+            if count == 0:
+                pnach.write("\n\n//Aigis skills")
+            pnach.write("\n//Aigis Persona Skill " + (str(count + 1)).upper() + "\npatch=1,EE,00" +
+                        format(8602716 + (count * 2), "x") + ",short,0" + partySkills.aigSkills[count])
+            count += 1
+
+# Koromaru
+if koromaruLvl != 0:
+    if newMoonCheck in ["F", "f"]:
+        partySkills.koroSkills.remove(skillID.Apt_Pupil)
+        partySkills.koroSkills.remove(skillID.Mighty_Swing)
+        partySkills.koroSkills.remove(skillID.Desecrate)
+        partySkills.koroSkills.remove(skillID.Heavens_Blade)
+        partySkills.koroSkills.remove(skillID.Ragnarok)
+        if koromaruLvl >= 56:
+            partySkills.koroSkills.remove(skillID.Mudo)
+        if koromaruLvl >= 40:
+            partySkills.koroSkills.remove(skillID.Counter)
+        if koromaruLvl not in range(38, 66):
+            partySkills.koroSkills.remove(skillID.Maragion)
+        if koromaruLvl not in range(40, 51):
+            partySkills.koroSkills.remove(skillID.Counterstrike)
+        if koromaruLvl not in range(42, 70):
+            partySkills.koroSkills.remove(skillID.Mamudo)
+        if koromaruLvl < 45:
+            partySkills.koroSkills.remove(skillID.Agidyne)
+        if koromaruLvl not in range(48, 76):
+            partySkills.koroSkills.remove(skillID.Fire_Boost)
+        if koromaruLvl < 52:
+            partySkills.koroSkills.remove(skillID.High_Counter)
+        if koromaruLvl < 56:
+            partySkills.koroSkills.remove(skillID.Mudoon)
+        if koromaruLvl < 60:
+            partySkills.koroSkills.remove(skillID.Mudo_Boost)
+        if koromaruLvl < 71:
+            partySkills.koroSkills.remove(skillID.Mamudoon)
+    if newMoonCheck in ["M", "m"]:
+        partySkills.koroSkills.remove(skillID.Counter)
+        partySkills.koroSkills.remove(skillID.Counterstrike)
+        partySkills.koroSkills.remove(skillID.High_Counter)
+        partySkills.koroSkills.remove(skillID.Mudo_Boost)
+        if koromaruLvl >= 33:
+            partySkills.koroSkills.remove(skillID.Mudo)
+        if koromaruLvl not in range(34, 66):
+            partySkills.koroSkills.remove(skillID.Maragion)
+        if koromaruLvl not in range(40, 74):
+            partySkills.koroSkills.remove(skillID.Mighty_Swing)
+        if koromaruLvl not in range(42, 48):
+            partySkills.koroSkills.remove(skillID.Mamudo)
+        if koromaruLvl not in range(45, 79):
+            partySkills.koroSkills.remove(skillID.Agidyne)
+        if koromaruLvl not in range(39, 76):
+            partySkills.koroSkills.remove(skillID.Fire_Boost)
+        if koromaruLvl not in range(33, 70):
+            partySkills.koroSkills.remove(skillID.Mudoon)
+        if koromaruLvl < 49:
+            partySkills.koroSkills.remove(skillID.Mamudoon)
+        if koromaruLvl < 71:
+            partySkills.koroSkills.remove(skillID.Desecrate)
+        if koromaruLvl < 75:
+            partySkills.koroSkills.remove(skillID.Heavens_Blade)
+        if koromaruLvl < 80:
+            partySkills.koroSkills.remove(skillID.Ragnarok)
+
+    if koromaruLvl >= 45:
+        partySkills.koroSkills.remove(skillID.Agilao)
+    if koromaruLvl >= 50:
+        partySkills.koroSkills.remove(skillID.Sukukaja)
+    if koromaruLvl < 50:
+        partySkills.koroSkills.remove(skillID.Masukukaja)
+    if koromaruLvl < 67:
+        partySkills.koroSkills.remove(skillID.Maragidyne)
+    if koromaruLvl < 77:
+        partySkills.koroSkills.remove(skillID.Fire_Amp)
+
+    count = 0
+    while count < len(partySkills.koroSkills):
+        if count == 0:
+            pnach.write("\n\n//Koromaru skills")
+        pnach.write("\n//Koromaru Persona Skill " + (str(count + 1)).upper() + "\npatch=1,EE,00" +
+                    format(8608792 + (count * 2), "x") + ",short,0" + partySkills.koroSkills[count])
+        count += 1
 
 # closing message
 print("Done! Place in your cheats folder.")

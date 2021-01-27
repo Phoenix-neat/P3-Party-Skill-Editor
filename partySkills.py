@@ -23,16 +23,14 @@ mitSkills = [skillID.Bufu, skillID.Mabufu, skillID.Dia, skillID.Marin_Karin, ski
              skillID.Niflheim]
 
 aigSkills = [skillID.Kill_Rush, skillID.Swift_Strike, skillID.Sukukaja, skillID.Rakukaja, skillID.Fatal_End,
-             skillID.Tarukaja, skillID.Dekunda, skillID.Masukukaja, skillID.Heat_Riser, skillID.Marakukaja,
-             skillID.Heat_Wave, skillID.Marakukaja, skillID.Diarahan, skillID.Marakukaja, skillID.Diarahan,
-             skillID.Matarukaja, skillID.Diarahan, skillID.Matarukaja, skillID.Samarecarm, skillID.Akasha_Arts,
+             skillID.Tarukaja, skillID.Dekunda, skillID.Masukukaja, skillID.Heat_Riser, skillID.Heat_Wave,
+             skillID.Marakukaja, skillID.Diarahan, skillID.Matarukaja, skillID.Samarecarm, skillID.Akasha_Arts,
              skillID.Gods_Hand]
 
 koroSkills = [skillID.Agilao, skillID.Mudo, skillID.Sukukaja, skillID.Counter, skillID.Apt_Pupil, skillID.Maragion,
               skillID.Counterstrike, skillID.Mighty_Swing, skillID.Mamudo, skillID.Agidyne, skillID.Fire_Boost,
-              skillID.Masukukaja, skillID.High_Counter, skillID.Mudoon, skillID.Mudo_Boost, skillID.Fire_Break,
-              skillID.Maragidyne, skillID.Mamudoon, skillID.Desecrate, skillID.Heavens_Blade, skillID.Fire_Amp,
-              skillID.Ragnarok]
+              skillID.Masukukaja, skillID.High_Counter, skillID.Mudoon, skillID.Mudo_Boost, skillID.Maragidyne,
+              skillID.Mamudoon, skillID.Desecrate, skillID.Heavens_Blade, skillID.Fire_Amp, skillID.Ragnarok]
 
 kenSkills = [skillID.Hama, skillID.Cruel_Attack, skillID.Zionga, skillID.Sukunda, skillID.Diarama, skillID.Hamaon,
              skillID.Recarm, skillID.Mediarama, skillID.Hama_Boost, skillID.Masukunda, skillID.Ziodyne,
