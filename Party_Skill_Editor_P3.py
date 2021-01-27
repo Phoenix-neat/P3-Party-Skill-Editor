@@ -24,8 +24,8 @@ kenLvl = int(input("Ken: "))
 if gameCheck in ["J", "j"]:
     aigisLvl = int(input("Aigis: "))
     shinjiroLvl = int(input("Shinjiro: "))
-elif gameCheck in ["A", "a"]:
-    metisLvl = int(input("Metis: "))
+# elif gameCheck in ["A", "a"]:
+#    metisLvl = int(input("Metis: "))
 
 # Creates/ overwrites the pnach file
 overwrite = open("94A82AAA_partySkills.pnach", "w")
@@ -161,6 +161,8 @@ if junpeiLvl != 0:
             partySkills.junSkills.remove(skillID.Power_Charge)
         if junpeiLvl < 80:
             partySkills.junSkills.remove(skillID.Phys_Skill_Up)
+        if junpeiLvl < 65:
+            partySkills.junSkills.remove(skillID.Brave_Blade)
 
     if gameCheck in ["J", "j"]:
         partySkills.junSkills.remove(skillID.Vorpal_Blade_Answer)
@@ -440,6 +442,154 @@ if koromaruLvl != 0:
         pnach.write("\n//Koromaru Persona Skill " + (str(count + 1)).upper() + "\npatch=1,EE,00" +
                     format(8608792 + (count * 2), "x") + ",short,0" + partySkills.koroSkills[count])
         count += 1
+
+# Ken
+if kenLvl != 0:
+    if newMoonCheck in ["F", "f"]:
+        partySkills.kenSkills.remove(skillID.Sukunda)
+        partySkills.kenSkills.remove(skillID.Masukunda)
+        partySkills.kenSkills.remove(skillID.Primal_Force)
+        partySkills.kenSkills.remove(skillID.Sanctify)
+        partySkills.kenSkills.remove(skillID.Thunder_Reign)
+        if kenLvl >= 41:
+            partySkills.kenSkills.remove(skillID.Hama)
+        if kenLvl >= 59:
+            partySkills.kenSkills.remove(skillID.Cruel_Attack)
+        if kenLvl not in range(51, 77):
+            partySkills.kenSkills.remove(skillID.Mediarama)
+        if kenLvl < 54:
+            partySkills.kenSkills.remove(skillID.Hama_Boost)
+        if kenLvl < 55:
+            partySkills.kenSkills.remove(skillID.Ziodyne)
+        if gameCheck in ["J", "j"]:
+            if kenLvl not in range(37, 61):
+                partySkills.kenSkills.remove(skillID.Diarama)
+            if kenLvl < 41:
+                partySkills.kenSkills.remove(skillID.Hamaon)
+            if kenLvl not in range(42, 72):
+                partySkills.kenSkills.remove(skillID.Recarm)
+            if kenLvl < 59:
+                partySkills.kenSkills.remove(skillID.Vile_Assault)
+            if kenLvl < 62:
+                partySkills.kenSkills.remove(skillID.Diarahan)
+            if kenLvl < 65:
+                partySkills.kenSkills.remove(skillID.Spear_Master)
+            if kenLvl < 73:
+                partySkills.kenSkills.remove(skillID.Samarecarm)
+            if kenLvl < 78:
+                partySkills.kenSkills.remove(skillID.Mediarahan)
+        elif gameCheck in ["A", "a"]:
+            if kenLvl not in range(29, 59):
+                partySkills.kenSkills.remove(skillID.Diarama)
+            if kenLvl < 35:
+                partySkills.kenSkills.remove(skillID.Hamaon)
+            if kenLvl not in range(32, 71):
+                partySkills.kenSkills.remove(skillID.Recarm)
+            if kenLvl < 46:
+                partySkills.kenSkills.remove(skillID.Vile_Assault)
+            if kenLvl < 60:
+                partySkills.kenSkills.remove(skillID.Diarahan)
+            if kenLvl < 64:
+                partySkills.kenSkills.remove(skillID.Spear_Master)
+            if kenLvl < 71:
+                partySkills.kenSkills.remove(skillID.Samarecarm)
+            if kenLvl < 76:
+                partySkills.kenSkills.remove(skillID.Mediarahan)
+
+    elif newMoonCheck in ["M", "m"]:
+        partySkills.kenSkills.remove(skillID.Hama_Boost)
+        if kenLvl >= 35:
+            partySkills.kenSkills.remove(skillID.Hama)
+        if kenLvl >= 46:
+            partySkills.kenSkills.remove(skillID.Cruel_Attack)
+        if kenLvl >= 42:
+            partySkills.kenSkills.remove(skillID.Sukunda)
+        if kenLvl >= 60:
+            partySkills.kenSkills.remove(skillID.Diarama)
+        if kenLvl not in range(35, 74):
+            partySkills.kenSkills.remove(skillID.Hamaon)
+        if kenLvl not in range(32, 70):
+            partySkills.kenSkills.remove(skillID.Recarm)
+        if kenLvl not in range(37, 75):
+            partySkills.kenSkills.remove(skillID.Mediarama)
+        if kenLvl < 42:
+            partySkills.kenSkills.remove(skillID.Masukunda)
+        if kenLvl not in range(55, 79):
+            partySkills.kenSkills.remove(skillID.Ziodyne)
+        if kenLvl not in range(46, 64):
+            partySkills.kenSkills.remove(skillID.Vile_Assault)
+        if kenLvl < 60:
+            partySkills.kenSkills.remove(skillID.Diarahan)
+        if kenLvl < 54:
+            partySkills.kenSkills.remove(skillID.Spear_Master)
+        if kenLvl < 65:
+            partySkills.kenSkills.remove(skillID.Primal_Force)
+        if kenLvl < 71:
+            partySkills.kenSkills.remove(skillID.Samarecarm)
+        if kenLvl < 74:
+            partySkills.kenSkills.remove(skillID.Sanctify)
+        if kenLvl < 76:
+            partySkills.kenSkills.remove(skillID.Mediarahan)
+        if kenLvl < 80:
+            partySkills.kenSkills.remove(skillID.Thunder_Reign)
+
+    if kenLvl >= 55:
+        partySkills.kenSkills.remove(skillID.Zionga)
+
+    count = 0
+    while count < len(partySkills.kenSkills):
+        if count == 0:
+            pnach.write("\n\n//Ken skills")
+        pnach.write("\n//Ken Persona Skill " + (str(count + 1)).upper() + "\npatch=1,EE,00" +
+                    format(8607056 + (count * 2), "x") + ",short,0" + partySkills.kenSkills[count])
+        count += 1
+
+# Shinjiro
+if gameCheck in ["J", "j"]:
+    if shinjiroLvl != 0:
+        if newMoonCheck in ["F", "f"]:
+            partySkills.shinSkills.remove(skillID.Regenerate3)
+            partySkills.shinSkills.remove(skillID.Phys_Skill_Up)
+            if shinjiroLvl < 65:
+                partySkills.shinSkills.remove(skillID.Regenerate2)
+        elif newMoonCheck in ["M", "m"]:
+            if shinjiroLvl not in range(65, 74):
+                partySkills.shinSkills.remove(skillID.Regenerate2)
+            if shinjiroLvl < 75:
+                partySkills.shinSkills.remove(skillID.Regenerate3)
+            if shinjiroLvl < 80:
+                partySkills.shinSkills.remove(skillID.Phys_Skill_Up)
+
+        if shinjiroLvl >= 65:
+            partySkills.shinSkills.remove(skillID.Regenerate1)
+        if shinjiroLvl >= 42:
+            partySkills.shinSkills.remove(skillID.Counter)
+        if shinjiroLvl >= 77:
+            partySkills.shinSkills.remove(skillID.Fatal_End)
+        if shinjiroLvl < 39:
+            partySkills.shinSkills.remove(skillID.Evil_Smile)
+        if shinjiroLvl not in range(42, 54):
+            partySkills.shinSkills.remove(skillID.Counterstrike)
+        if shinjiroLvl < 50:
+            partySkills.shinSkills.remove(skillID.Power_Charge)
+        if shinjiroLvl not in range(52, 59):
+            partySkills.shinSkills.remove(skillID.Blade_of_Fury)
+        if shinjiroLvl not in range(53, 71):
+            partySkills.shinSkills.remove(skillID.Akasha_Arts)
+        if shinjiroLvl < 55:
+            partySkills.shinSkills.remove(skillID.High_Counter)
+        if shinjiroLvl < 60:
+            partySkills.shinSkills.remove(skillID.Deathbound)
+        if shinjiroLvl < 77:
+            partySkills.shinSkills.remove(skillID.Gods_Hand)
+
+        count = 0
+        while count < len(partySkills.shinSkills):
+            if count == 0:
+                pnach.write("\n\n//Shinjiro skills")
+            pnach.write("\n//Shinjiro Persona Skill " + (str(count + 1)).upper() + "\npatch=1,EE,00" +
+                        format(8607924 + (count * 2), "x") + ",short,0" + partySkills.shinSkills[count])
+            count += 1
 
 # closing message
 print("Done! Place in your cheats folder.")

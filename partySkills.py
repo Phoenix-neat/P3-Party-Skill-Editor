@@ -41,7 +41,7 @@ shinSkills = [skillID.Regenerate1, skillID.Counter, skillID.Fatal_End, skillID.E
               skillID.Power_Charge, skillID.Blade_of_Fury, skillID.Heat_Wave, skillID.High_Counter, skillID.Deathbound,
               skillID.Regenerate2, skillID.Akasha_Arts, skillID.Regenerate3, skillID.Gods_Hand, skillID.Phys_Skill_Up]
 
-metSkills = [skillID.Fatal_End, skillID.Garula, skillID.Dekaja, skillID.Marin_Karin, skillID.Bufula,
-             skillID.Power_Charge, skillID.Herculean_Strike, skillID.Gigantic_Fist, skillID.Poison_Arrow,
-             skillID.Garudyne, skillID.Vicious_Strike, skillID.Bufudyne, skillID.Sexy_Dance, skillID.Akasha_Arts,
-             skillID.Brave_Blade]
+# metSkills = [skillID.Fatal_End, skillID.Garula, skillID.Dekaja, skillID.Marin_Karin, skillID.Bufula,
+#             skillID.Power_Charge, skillID.Herculean_Strike, skillID.Gigantic_Fist, skillID.Poison_Arrow,
+#             skillID.Garudyne, skillID.Vicious_Strike, skillID.Bufudyne, skillID.Sexy_Dance, skillID.Akasha_Arts,
+#             skillID.Brave_Blade]

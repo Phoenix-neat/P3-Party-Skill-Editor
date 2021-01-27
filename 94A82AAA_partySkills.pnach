@@ -105,3 +105,39 @@ patch=1,EE,00835c22,short,0082
 patch=1,EE,00835c24,short,0211
 //Koromaru Persona Skill 8
 patch=1,EE,00835c26,short,0009
+
+//Ken skills
+//Ken Persona Skill 1
+patch=1,EE,00835550,short,00D1
+//Ken Persona Skill 2
+patch=1,EE,00835552,short,00C2
+//Ken Persona Skill 3
+patch=1,EE,00835554,short,0246
+//Ken Persona Skill 4
+patch=1,EE,00835556,short,008F
+//Ken Persona Skill 5
+patch=1,EE,00835558,short,00CD
+//Ken Persona Skill 6
+patch=1,EE,0083555a,short,0031
+//Ken Persona Skill 7
+patch=1,EE,0083555c,short,00C5
+//Ken Persona Skill 8
+patch=1,EE,0083555e,short,0024
+
+//Shinjiro skills
+//Shinjiro Persona Skill 1
+patch=1,EE,008358b4,short,0040
+//Shinjiro Persona Skill 2
+patch=1,EE,008358b6,short,00DC
+//Shinjiro Persona Skill 3
+patch=1,EE,008358b8,short,0075
+//Shinjiro Persona Skill 4
+patch=1,EE,008358ba,short,0222
+//Shinjiro Persona Skill 5
+patch=1,EE,008358bc,short,0080
+//Shinjiro Persona Skill 6
+patch=1,EE,008358be,short,0225
+//Shinjiro Persona Skill 7
+patch=1,EE,008358c0,short,0078
+//Shinjiro Persona Skill 8
+patch=1,EE,008358c2,short,023F
