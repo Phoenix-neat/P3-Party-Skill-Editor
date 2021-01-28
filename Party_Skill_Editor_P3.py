@@ -29,7 +29,7 @@ if gameCheck in ["J", "j"]:
 
 # Creates/ overwrites the pnach file
 overwrite = open("94A82AAA_partySkills.pnach", "w")
-overwrite.write("")
+overwrite.write("Persona 3 FES Party Skill Overwrite")
 pnach = open("94A82AAA_partySkills.pnach", "a")
 
 # Yukari
@@ -38,39 +38,43 @@ if yukariLvl != 0:
     if newMoonCheck in ["F", "f"]:
         partySkills.yukSkills.remove(skillID.Amrita)
         partySkills.yukSkills.remove(skillID.Panta_Rhei)
-    elif newMoonCheck in ["M", "m"]:
-        if yukariLvl >= 55:
+        if yukariLvl < 36:
             partySkills.yukSkills.remove(skillID.Me_Patra)
-        if yukariLvl >= 80:
+        if yukariLvl < 57:
             partySkills.yukSkills.remove(skillID.Garudyne)
+    elif newMoonCheck in ["M", "m"]:
+        if yukariLvl not in range(36, 55):
+            partySkills.yukSkills.remove(skillID.Me_Patra)
+        if yukariLvl < 55:
+            partySkills.yukSkills.remove(skillID.Amrita)
+        if yukariLvl not in range(57, 80):
+            partySkills.yukSkills.remove(skillID.Garudyne)
+        if yukariLvl < 80:
+            partySkills.yukSkills.remove(skillID.Panta_Rhei)
     if yukariLvl >= 25:
         partySkills.yukSkills.remove(skillID.Dia)
-    if yukariLvl not in range(4, 35):
+    if yukariLvl not in range(4, 36):
         partySkills.yukSkills.remove(skillID.Patra)
-    if yukariLvl not in range(5, 31):
+    if yukariLvl not in range(5, 32):
         partySkills.yukSkills.remove(skillID.Garu)
     if yukariLvl < 16:
         partySkills.yukSkills.remove(skillID.Charmdi)
-    if yukariLvl not in range(21, 45):
+    if yukariLvl not in range(21, 46):
         partySkills.yukSkills.remove(skillID.Magaru)
-    if yukariLvl not in range(22, 42):
+    if yukariLvl not in range(22, 43):
         partySkills.yukSkills.remove(skillID.Media)
-    if yukariLvl not in range(25, 51):
+    if yukariLvl not in range(25, 52):
         partySkills.yukSkills.remove(skillID.Diarama)
-    if yukariLvl not in range(28, 67):
+    if yukariLvl not in range(28, 68):
         partySkills.yukSkills.remove(skillID.Recarm)
     if yukariLvl not in range(32, 57):
         partySkills.yukSkills.remove(skillID.Garula)
-    if yukariLvl < 36:
-        partySkills.yukSkills.remove(skillID.Me_Patra)
     if yukariLvl not in range(43, 74):
         partySkills.yukSkills.remove(skillID.Mediarama)
     if yukariLvl not in range(46, 65):
         partySkills.yukSkills.remove(skillID.Magarula)
     if yukariLvl < 52:
         partySkills.yukSkills.remove(skillID.Diarahan)
-    if yukariLvl < 57:
-        partySkills.yukSkills.remove(skillID.Garudyne)
     if yukariLvl < 60:
         partySkills.yukSkills.remove(skillID.Wind_Break)
     if yukariLvl < 65:
@@ -84,7 +88,7 @@ if yukariLvl != 0:
     count = 0
     while count < len(partySkills.yukSkills):
         if count == 0:
-            pnach.write("//Yukari skills")
+            pnach.write("\n\n//Yukari skills")
         pnach.write("\n//Yukari Persona Skill " + (str(count + 1)).upper() + "\npatch=1,EE,00" +
                     format(8601848 + (count * 2), "x") + ",short,0" + partySkills.yukSkills[count])
         count += 1
@@ -100,11 +104,11 @@ if junpeiLvl != 0:
         partySkills.junSkills.remove(skillID.Phys_Skill_Up)
         if junpeiLvl >= 18:
             partySkills.junSkills.remove(skillID.Cleave)
-        if junpeiLvl not in range(5, 31):
+        if junpeiLvl not in range(5, 32):
             partySkills.junSkills.remove(skillID.Agi)
-        if junpeiLvl not in range(18, 24):
+        if junpeiLvl not in range(18, 25):
             partySkills.junSkills.remove(skillID.Assault_Dive)
-        if junpeiLvl not in range(25, 54):
+        if junpeiLvl not in range(25, 55):
             partySkills.junSkills.remove(skillID.Kill_Rush)
         if junpeiLvl < 44:
             partySkills.junSkills.remove(skillID.Marakukaja)
@@ -115,19 +119,19 @@ if junpeiLvl != 0:
 
         if gameCheck in ["J", "j"]:
             partySkills.junSkills.remove(skillID.Deathbound)
-            if junpeiLvl not in range(32, 63):
+            if junpeiLvl not in range(32, 64):
                 partySkills.junSkills.remove(skillID.Agilao)
-            if junpeiLvl not in range(35, 44):
+            if junpeiLvl not in range(35, 45):
                 partySkills.junSkills.remove(skillID.Counter)
-            if junpeiLvl not in range(9, 43):
+            if junpeiLvl not in range(9, 44):
                 partySkills.junSkills.remove(skillID.Rakukaja)
             if junpeiLvl < 65:
                 partySkills.junSkills.remove(skillID.Brave_Blade)
         elif gameCheck in ["A", "a"]:
             partySkills.junSkills.remove(skillID.Brave_Blade)
-            if junpeiLvl not in range(30, 63):
+            if junpeiLvl not in range(30, 64):
                 partySkills.junSkills.remove(skillID.Agilao)
-            if junpeiLvl not in range(31, 44):
+            if junpeiLvl not in range(31, 45):
                 partySkills.junSkills.remove(skillID.Counter)
             if junpeiLvl < 34:
                 partySkills.junSkills.remove(skillID.Marakukaja)
@@ -143,15 +147,15 @@ if junpeiLvl != 0:
                 partySkills.junSkills.remove(skillID.Cleave)
         if gameCheck in ["A", "a"]:
             partySkills.junSkills.remove(skillID.Cleave)
-        if junpeiLvl not in range(5, 29):
+        if junpeiLvl not in range(5, 30):
             partySkills.junSkills.remove(skillID.Agi)
-        if junpeiLvl not in range(9, 33):
+        if junpeiLvl not in range(9, 34):
             partySkills.junSkills.remove(skillID.Rakukaja)
-        if junpeiLvl not in range(18, 54):
+        if junpeiLvl not in range(18, 55):
             partySkills.junSkills.remove(skillID.Kill_Rush)
-        if junpeiLvl not in range(30, 63):
+        if junpeiLvl not in range(30, 64):
             partySkills.junSkills.remove(skillID.Agilao)
-        if junpeiLvl not in range(31, 44):
+        if junpeiLvl not in range(31, 45):
             partySkills.junSkills.remove(skillID.Counter)
         if junpeiLvl < 34:
             partySkills.junSkills.remove(skillID.Marakukaja)
@@ -173,13 +177,13 @@ if junpeiLvl != 0:
         if junpeiLvl < 75:
             partySkills.junSkills.remove(skillID.Vorpal_Blade_Answer)
 
-    if junpeiLvl not in range(7, 49):
+    if junpeiLvl not in range(7, 50):
         partySkills.junSkills.remove(skillID.Re_Patra)
-    if junpeiLvl not in range(20, 39):
+    if junpeiLvl not in range(20, 40):
         partySkills.junSkills.remove(skillID.Double_Fangs)
-    if junpeiLvl not in range(40, 74):
+    if junpeiLvl not in range(40, 75):
         partySkills.junSkills.remove(skillID.Torrent_Shot)
-    if junpeiLvl not in range(45, 57):
+    if junpeiLvl not in range(45, 58):
         partySkills.junSkills.remove(skillID.Counterstrike)
     if junpeiLvl not in range(50, 65):
         partySkills.junSkills.remove(skillID.Blade_of_Fury)
@@ -205,12 +209,14 @@ if akihikoLvl != 0:
             partySkills.akiSkills.remove(skillID.Ziodyne)
         if akihikoLvl < 66:
             partySkills.akiSkills.remove(skillID.Masukunda)
-    if newMoonCheck in ["M", "m"]:
+    elif newMoonCheck in ["M", "m"]:
         partySkills.akiSkills.remove(skillID.Masukunda)
-        if akihikoLvl not in range(53, 79):
+        if akihikoLvl not in range(53, 80):
             partySkills.akiSkills.remove(skillID.Ziodyne)
         if akihikoLvl < 66:
             partySkills.akiSkills.remove(skillID.Debilitate)
+        if akihikoLvl < 80:
+            partySkills.akiSkills.remove(skillID.Thunder_Reign)
 
     if akihikoLvl >= 50:
         partySkills.akiSkills.remove(skillID.Sonic_Punch)
@@ -218,21 +224,21 @@ if akihikoLvl != 0:
         partySkills.akiSkills.remove(skillID.Zio)
     if akihikoLvl >= 38:
         partySkills.akiSkills.remove(skillID.Dia)
-    if akihikoLvl not in range(16, 46):
+    if akihikoLvl not in range(16, 47):
         partySkills.akiSkills.remove(skillID.Tarunda)
-    if akihikoLvl not in range(21, 40):
+    if akihikoLvl not in range(21, 41):
         partySkills.akiSkills.remove(skillID.Mazio)
-    if akihikoLvl not in range(25, 56):
+    if akihikoLvl not in range(25, 57):
         partySkills.akiSkills.remove(skillID.Rakunda)
-    if akihikoLvl not in range(29, 52):
+    if akihikoLvl not in range(29, 53):
         partySkills.akiSkills.remove(skillID.Zionga)
-    if akihikoLvl not in range(33, 65):
+    if akihikoLvl not in range(33, 66):
         partySkills.akiSkills.remove(skillID.Sukunda)
-    if akihikoLvl not in range(37, 75):
+    if akihikoLvl not in range(37, 76):
         partySkills.akiSkills.remove(skillID.Elec_Boost)
-    if akihikoLvl not in range(38, 64):
+    if akihikoLvl not in range(38, 65):
         partySkills.akiSkills.remove(skillID.Diarama)
-    if akihikoLvl not in range(41, 73):
+    if akihikoLvl not in range(41, 74):
         partySkills.akiSkills.remove(skillID.Mazionga)
     if akihikoLvl < 47:
         partySkills.akiSkills.remove(skillID.Matarunda)
@@ -262,7 +268,7 @@ if mitsuruLvl != 0:
         if mitsuruLvl < 55:
             partySkills.mitSkills.remove(skillID.Bufudyne)
     if newMoonCheck in ["M", "m"]:
-        if mitsuruLvl not in range(55, 79):
+        if mitsuruLvl not in range(55, 80):
             partySkills.mitSkills.remove(skillID.Bufudyne)
         if mitsuruLvl < 80:
             partySkills.mitSkills.remove(skillID.Niflheim)
@@ -275,17 +281,17 @@ if mitsuruLvl != 0:
         partySkills.mitSkills.remove(skillID.Dia)
     if mitsuruLvl >= 50:
         partySkills.mitSkills.remove(skillID.Marin_Karin)
-    if mitsuruLvl not in range(21, 41):
+    if mitsuruLvl not in range(21, 55):
         partySkills.mitSkills.remove(skillID.Bufula)
-    if mitsuruLvl not in range(25, 57):
+    if mitsuruLvl not in range(25, 58):
         partySkills.mitSkills.remove(skillID.Diarama)
     if mitsuruLvl < 27:
         partySkills.mitSkills.remove(skillID.Spirit_Drain)
     if mitsuruLvl < 32:
         partySkills.mitSkills.remove(skillID.Tentarafoo)
-    if mitsuruLvl not in range(42, 70):
+    if mitsuruLvl not in range(42, 71):
         partySkills.mitSkills.remove(skillID.Mabufula)
-    if mitsuruLvl not in range(45, 75):
+    if mitsuruLvl not in range(45, 76):
         partySkills.mitSkills.remove(skillID.Ice_Boost)
     if mitsuruLvl < 50:
         partySkills.mitSkills.remove(skillID.Mind_Charge)
@@ -324,15 +330,15 @@ if gameCheck in ["J", "j"]:
             partySkills.aigSkills.remove(skillID.Swift_Strike)
         if aigisLvl >= 47:
             partySkills.aigSkills.remove(skillID.Sukukaja)
-        if aigisLvl not in range(32, 55):
+        if aigisLvl not in range(32, 56):
             partySkills.aigSkills.remove(skillID.Rakukaja)
-        if aigisLvl not in range(35, 72):
+        if aigisLvl not in range(35, 73):
             partySkills.aigSkills.remove(skillID.Fatal_End)
-        if aigisLvl not in range(36, 59):
+        if aigisLvl not in range(36, 60):
             partySkills.aigSkills.remove(skillID.Tarukaja)
         if aigisLvl < 42:
             partySkills.aigSkills.remove(skillID.Dekunda)
-        if aigisLvl not in range(51, 76):
+        if aigisLvl not in range(51, 77):
             partySkills.aigSkills.remove(skillID.Heat_Wave)
         if aigisLvl < 56:
             partySkills.aigSkills.remove(skillID.Marakukaja)
@@ -378,18 +384,18 @@ if koromaruLvl != 0:
         if koromaruLvl < 60:
             partySkills.koroSkills.remove(skillID.Mudo_Boost)
         if gameCheck in ["J", "j"]:
-            if koromaruLvl not in range(38, 66):
+            if koromaruLvl not in range(38, 67):
                 partySkills.koroSkills.remove(skillID.Maragion)
-            if koromaruLvl not in range(48, 76):
+            if koromaruLvl not in range(48, 77):
                 partySkills.koroSkills.remove(skillID.Fire_Boost)
             if koromaruLvl < 56:
                 partySkills.koroSkills.remove(skillID.Mudoon)
             if koromaruLvl < 71:
                 partySkills.koroSkills.remove(skillID.Mamudoon)
         elif gameCheck in ["A", "a"]:
-            if koromaruLvl not in range(34, 66):
+            if koromaruLvl not in range(34, 67):
                 partySkills.koroSkills.remove(skillID.Maragion)
-            if koromaruLvl not in range(39, 76):
+            if koromaruLvl not in range(39, 77):
                 partySkills.koroSkills.remove(skillID.Fire_Boost)
             if koromaruLvl < 33:
                 partySkills.koroSkills.remove(skillID.Mudoon)
@@ -403,17 +409,17 @@ if koromaruLvl != 0:
         partySkills.koroSkills.remove(skillID.Mudo_Boost)
         if koromaruLvl >= 33:
             partySkills.koroSkills.remove(skillID.Mudo)
-        if koromaruLvl not in range(34, 66):
+        if koromaruLvl not in range(34, 67):
             partySkills.koroSkills.remove(skillID.Maragion)
-        if koromaruLvl not in range(40, 74):
+        if koromaruLvl not in range(40, 75):
             partySkills.koroSkills.remove(skillID.Mighty_Swing)
-        if koromaruLvl not in range(42, 48):
+        if koromaruLvl not in range(42, 49):
             partySkills.koroSkills.remove(skillID.Mamudo)
-        if koromaruLvl not in range(45, 79):
+        if koromaruLvl not in range(45, 80):
             partySkills.koroSkills.remove(skillID.Agidyne)
-        if koromaruLvl not in range(39, 76):
+        if koromaruLvl not in range(39, 77):
             partySkills.koroSkills.remove(skillID.Fire_Boost)
-        if koromaruLvl not in range(33, 70):
+        if koromaruLvl not in range(33, 71):
             partySkills.koroSkills.remove(skillID.Mudoon)
         if koromaruLvl < 49:
             partySkills.koroSkills.remove(skillID.Mamudoon)
@@ -455,18 +461,18 @@ if kenLvl != 0:
             partySkills.kenSkills.remove(skillID.Hama)
         if kenLvl >= 59:
             partySkills.kenSkills.remove(skillID.Cruel_Attack)
-        if kenLvl not in range(51, 77):
+        if kenLvl not in range(51, 78):
             partySkills.kenSkills.remove(skillID.Mediarama)
         if kenLvl < 54:
             partySkills.kenSkills.remove(skillID.Hama_Boost)
         if kenLvl < 55:
             partySkills.kenSkills.remove(skillID.Ziodyne)
         if gameCheck in ["J", "j"]:
-            if kenLvl not in range(37, 61):
+            if kenLvl not in range(37, 62):
                 partySkills.kenSkills.remove(skillID.Diarama)
             if kenLvl < 41:
                 partySkills.kenSkills.remove(skillID.Hamaon)
-            if kenLvl not in range(42, 72):
+            if kenLvl not in range(42, 73):
                 partySkills.kenSkills.remove(skillID.Recarm)
             if kenLvl < 59:
                 partySkills.kenSkills.remove(skillID.Vile_Assault)
@@ -479,7 +485,7 @@ if kenLvl != 0:
             if kenLvl < 78:
                 partySkills.kenSkills.remove(skillID.Mediarahan)
         elif gameCheck in ["A", "a"]:
-            if kenLvl not in range(29, 59):
+            if kenLvl not in range(29, 60):
                 partySkills.kenSkills.remove(skillID.Diarama)
             if kenLvl < 35:
                 partySkills.kenSkills.remove(skillID.Hamaon)
@@ -508,15 +514,15 @@ if kenLvl != 0:
             partySkills.kenSkills.remove(skillID.Diarama)
         if kenLvl not in range(35, 74):
             partySkills.kenSkills.remove(skillID.Hamaon)
-        if kenLvl not in range(32, 70):
+        if kenLvl not in range(32, 71):
             partySkills.kenSkills.remove(skillID.Recarm)
-        if kenLvl not in range(37, 75):
+        if kenLvl not in range(37, 76):
             partySkills.kenSkills.remove(skillID.Mediarama)
         if kenLvl < 42:
             partySkills.kenSkills.remove(skillID.Masukunda)
-        if kenLvl not in range(55, 79):
+        if kenLvl not in range(55, 80):
             partySkills.kenSkills.remove(skillID.Ziodyne)
-        if kenLvl not in range(46, 64):
+        if kenLvl not in range(46, 65):
             partySkills.kenSkills.remove(skillID.Vile_Assault)
         if kenLvl < 60:
             partySkills.kenSkills.remove(skillID.Diarahan)
@@ -553,7 +559,7 @@ if gameCheck in ["J", "j"]:
             if shinjiroLvl < 65:
                 partySkills.shinSkills.remove(skillID.Regenerate2)
         elif newMoonCheck in ["M", "m"]:
-            if shinjiroLvl not in range(65, 74):
+            if shinjiroLvl not in range(65, 75):
                 partySkills.shinSkills.remove(skillID.Regenerate2)
             if shinjiroLvl < 75:
                 partySkills.shinSkills.remove(skillID.Regenerate3)
@@ -568,13 +574,13 @@ if gameCheck in ["J", "j"]:
             partySkills.shinSkills.remove(skillID.Fatal_End)
         if shinjiroLvl < 39:
             partySkills.shinSkills.remove(skillID.Evil_Smile)
-        if shinjiroLvl not in range(42, 54):
+        if shinjiroLvl not in range(42, 55):
             partySkills.shinSkills.remove(skillID.Counterstrike)
         if shinjiroLvl < 50:
             partySkills.shinSkills.remove(skillID.Power_Charge)
-        if shinjiroLvl not in range(52, 59):
+        if shinjiroLvl not in range(52, 60):
             partySkills.shinSkills.remove(skillID.Blade_of_Fury)
-        if shinjiroLvl not in range(53, 71):
+        if shinjiroLvl not in range(53, 72):
             partySkills.shinSkills.remove(skillID.Akasha_Arts)
         if shinjiroLvl < 55:
             partySkills.shinSkills.remove(skillID.High_Counter)

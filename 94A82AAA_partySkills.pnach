@@ -1,3 +1,5 @@
+Persona 3 FES Party Skill Overwrite
+
 //Yukari skills
 //Yukari Persona Skill 1
 patch=1,EE,008340f8,short,00ED
