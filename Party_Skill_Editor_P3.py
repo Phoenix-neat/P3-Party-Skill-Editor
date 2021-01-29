@@ -14,7 +14,7 @@ if gameCheck not in ["J", "j", "A", "a"]:
     raise SystemExit
 
 # checks the level for each party member
-print("Enter the level of each party member. If you do not have the member, or want to skip them, enter '0'")
+print("\nEnter the level of each party member. If you do not have the member, or want to skip them, enter '0'\n")
 yukariLvl = int(input("Yukari: "))
 junpeiLvl = int(input("Junpei: "))
 akihikoLvl = int(input("Akihiko: "))
@@ -598,4 +598,4 @@ if gameCheck in ["J", "j"]:
             count += 1
 
 # closing message
-print("Done! Place in your cheats folder.")
+redundant_check = input("\nDone! Place in your cheats folder.")
