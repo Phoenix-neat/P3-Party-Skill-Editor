@@ -1,6 +1,12 @@
 import skillID
 import partySkills
 
+# Python 2.7 compatibility
+try:
+    input = raw_input
+except NameError:
+    pass
+
 # checks if for vanilla FES or New Moon
 newMoonCheck = input("Type 'F' for vanilla Persona 3 FES, or 'M' for Persona 3 FES with the New Moon Balance Patch: ")
 if newMoonCheck not in ["F", "f", "M", "m"]:
