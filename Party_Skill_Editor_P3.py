@@ -605,4 +605,4 @@ with open("94A82AAA_partySkills.pnach", "a") as pnach:
                 count += 1
 
 # closing message
-print("\nDone! Place in your cheats folder.")
+redundant_check = input("\nDone! Place in your cheats folder.")
