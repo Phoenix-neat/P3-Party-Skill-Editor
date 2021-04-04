@@ -96,10 +96,11 @@ with open("94A82AAA_partySkills.pnach", "a") as pnach:
                         format(8601848 + (count * 2), "x") + ",short,0" + yukSkills[count])
             count += 1
         #fills in the remaining skill slots with blank entries to overwrite potential duplicates/ unwanted skills
-        while count < 8:
-            pnach.write("\n//Yukari Persona Skill " + (str(count + 1)).upper() + "\npatch=1,EE,00" +
-                        format(8601848 + (count * 2), "x") + ",short,0000")
-            count += 1
+        if count != 0:
+            while count < 8:
+                pnach.write("\n//Yukari Persona Skill " + (str(count + 1)).upper() + "\npatch=1,EE,00" +
+                            format(8601848 + (count * 2), "x") + ",short,0000")
+                count += 1
     
     #Junpei
         count = 0
@@ -109,10 +110,11 @@ with open("94A82AAA_partySkills.pnach", "a") as pnach:
             pnach.write("\n//Junpei Persona Skill " + (str(count + 1).upper()) + "\npatch=1,EE,00" +
                         format(8604452 + (count * 2), "x") + ",short,0" + junSkills[count])
             count += 1
-        while count < 8:
-            pnach.write("\n//Junpei Persona Skill " + (str(count + 1).upper()) + "\npatch=1,EE,00" +
-                        format(8604452 + (count * 2), "x") + ",short,0000")
-            count += 1
+        if count != 0:
+            while count < 8:
+                pnach.write("\n//Junpei Persona Skill " + (str(count + 1).upper()) + "\npatch=1,EE,00" +
+                            format(8604452 + (count * 2), "x") + ",short,0000")
+                count += 1
     
     #Akihiko
         count = 0
@@ -122,10 +124,11 @@ with open("94A82AAA_partySkills.pnach", "a") as pnach:
             pnach.write("\n//Akihiko Persona Skill " + (str(count + 1).upper()) + "\npatch=1,EE,00" +
                         format(8606188 + (count * 2), "x") + ",short,0" + akiSkills[count])
             count += 1
-        while count < 8:
-            pnach.write("\n//Akihiko Persona Skill " + (str(count + 1).upper()) + "\npatch=1,EE,00" +
-                        format(8606188 + (count * 2), "x") + ",short,0000")
-            count += 1
+        if count != 0:
+            while count < 8:
+                pnach.write("\n//Akihiko Persona Skill " + (str(count + 1).upper()) + "\npatch=1,EE,00" +
+                            format(8606188 + (count * 2), "x") + ",short,0000")
+                count += 1
 
     #Mitsuru
         count = 0
@@ -135,10 +138,11 @@ with open("94A82AAA_partySkills.pnach", "a") as pnach:
             pnach.write("\n//Mitsuru Persona Skill " + (str(count + 1).upper()) + "\npatch=1,EE,00" +
                         format(8603584 + (count * 2), "x") + ",short,0" + mitSkills[count])
             count += 1
-        while count < 8:
-            pnach.write("\n//Mitsuru Persona Skill " + (str(count + 1).upper()) + "\npatch=1,EE,00" +
-                        format(8603584 + (count * 2), "x") + ",short,0000")
-            count += 1
+        if count != 0:
+            while count < 8:
+                pnach.write("\n//Mitsuru Persona Skill " + (str(count + 1).upper()) + "\npatch=1,EE,00" +
+                            format(8603584 + (count * 2), "x") + ",short,0000")
+                count += 1
     
     #Aigis
         if gameCheck in ["J", "j"]:
@@ -149,10 +153,11 @@ with open("94A82AAA_partySkills.pnach", "a") as pnach:
                 pnach.write("\n//Aigis Persona Skill " + (str(count + 1)).upper() + "\npatch=1,EE,00" +
                             format(8602716 + (count * 2), "x") + ",short,0" + aigSkills[count])
                 count += 1
-            while count < 8:
-                pnach.write("\n//Aigis Persona Skill " + (str(count + 1)).upper() + "\npatch=1,EE,00" +
-                            format(8602716 + (count * 2), "x") + ",short,0000")
-                count += 1
+            if count != 0:
+                while count < 8:
+                    pnach.write("\n//Aigis Persona Skill " + (str(count + 1)).upper() + "\npatch=1,EE,00" +
+                                format(8602716 + (count * 2), "x") + ",short,0000")
+                    count += 1
 
     #Koromaru
         count = 0
@@ -162,10 +167,11 @@ with open("94A82AAA_partySkills.pnach", "a") as pnach:
             pnach.write("\n//Koromaru Persona Skill " + (str(count + 1)).upper() + "\npatch=1,EE,00" +
                         format(8608792 + (count * 2), "x") + ",short,0" + koroSkills[count])
             count += 1
-        while count < 8:
-            pnach.write("\n//Koromaru Persona Skill " + (str(count + 1)).upper() + "\npatch=1,EE,00" +
-                        format(8608792 + (count * 2), "x") + ",short,0000")
-            count += 1
+        if count != 0:
+            while count < 8:
+                pnach.write("\n//Koromaru Persona Skill " + (str(count + 1)).upper() + "\npatch=1,EE,00" +
+                            format(8608792 + (count * 2), "x") + ",short,0000")
+                count += 1
     
     #Ken
         count = 0
@@ -175,10 +181,11 @@ with open("94A82AAA_partySkills.pnach", "a") as pnach:
             pnach.write("\n//Ken Persona Skill " + (str(count + 1)).upper() + "\npatch=1,EE,00" +
                         format(8607056 + (count * 2), "x") + ",short,0" + kenSkills[count])
             count += 1
-        while count < 8:
-            pnach.write("\n//Ken Persona Skill " + (str(count + 1)).upper() + "\npatch=1,EE,00" +
-                        format(8607056 + (count * 2), "x") + ",short,0000")
-            count += 1
+        if count != 0:
+            while count < 8:
+                pnach.write("\n//Ken Persona Skill " + (str(count + 1)).upper() + "\npatch=1,EE,00" +
+                            format(8607056 + (count * 2), "x") + ",short,0000")
+                count += 1
     
     #Shinjiro
         if gameCheck in ["J", "j"]:
@@ -189,10 +196,11 @@ with open("94A82AAA_partySkills.pnach", "a") as pnach:
                 pnach.write("\n//Shinjiro Persona Skill " + (str(count + 1)).upper() + "\npatch=1,EE,00" +
                             format(8607924 + (count * 2), "x") + ",short,0" + shinSkills[count])
                 count += 1
-            while count < 8:
-                pnach.write("\n//Shinjiro Persona Skill " + (str(count + 1)).upper() + "\npatch=1,EE,00" +
-                            format(8607924 + (count * 2), "x") + ",short,0000")
-                count += 1
+            if count != 0:
+                while count < 8:
+                    pnach.write("\n//Shinjiro Persona Skill " + (str(count + 1)).upper() + "\npatch=1,EE,00" +
+                                format(8607924 + (count * 2), "x") + ",short,0000")
+                    count += 1
 
 # closing message
 redundant_check = input("\nDone! Place in your cheats folder.")
