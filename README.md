@@ -9,9 +9,11 @@ The program works like this:
 
 -First, it asks what the intention of the user is (for unmodded P3 or for New Moon)
 
--Second, it aks for the game played (Journey or Answer)
+-Second, it asks for the game played (Journey or Answer)
 
--Third, it asks for the level of each party member (and if Junpei has Spring of Life if he is selected)
+-Third, it asks for the date
+
+-Fourth, it asks for the level of each party member (and if Junpei has Spring of Life if he is selected)
 
 
 The program will then spit out a cheat code document, containing the skills that each party member should have at the level provided in the
@@ -28,3 +30,7 @@ Instructions:
 -Follow the instructions given by the program
 
 -Drag the created cheat code folder into your cheat code loader of choice (for PCSX2 it's the cheats folder)
+
+
+Making your own mods:
+You can make your own custom skill progressions (for use with your own mods) by editing Party_Modded.py and Party_Modded_A.py in the "Skill_Progressions" folder.
