@@ -195,8 +195,6 @@ koromaru = [
         (45, 80, Agidyne),
         (49, 100, Mamudoon),
         (50, 100, Masukukaja),
-        (52, 100, High_Counter),
-        (60, 100, Mudo_Boost),
         (67, 100, Maragidyne),
         (71, 100, Desecrate),
         (75, 100, Heavens_Blade),
