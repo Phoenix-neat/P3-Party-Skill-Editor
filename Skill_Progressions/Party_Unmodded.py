@@ -242,8 +242,8 @@ shinjiro = [
 ]
 
 #Determines if Personas are evolved
-monthCheck = int(input("Enter the month number (Example: December is 12): "))
-dayCheck = int(input("Enter the day number (No example you can do this): "))
+monthCheck = int(input("Enter the month number (For January, enter 13): "))
+dayCheck = int(input("Enter the day number: "))
 if monthCheck > 10 or monthCheck == 10 and dayCheck > 4:
         akihiko = akihikoEv
         ken = kenEv
@@ -253,5 +253,5 @@ if monthCheck > 11 or monthCheck == 11 and dayCheck > 17:
         mitsuru = mitsuruEv
 if monthCheck > 11 or monthCheck == 11 and dayCheck > 22:
         junpei = junpeiEv
-if monthCheck > 12 or monthCheck == 12 and dayCheck > 30:
+if monthCheck > 12 or monthCheck == 12 and dayCheck > 29:
         aigis = aigisEv
