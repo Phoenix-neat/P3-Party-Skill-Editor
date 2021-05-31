@@ -115,3 +115,21 @@ ken = [
         (71, 100, Samarecarm),
         (76, 100, Mediarahan)
 ]
+
+metis = [
+        (1, 100, Dekaja),
+        (1, 58, Garula),
+        (1, 48, Fatal_End),
+        (29, 65, Marin_Karin),
+        (34, 62, Bufula),
+        (40, 100, Power_Charge),
+        (45, 60, Herculean_Strike),
+        (48, 75, Gigantic_Fist),
+        (53, 100, Poison_Arrow),
+        (58, 100, Garudyne),
+        (60, 72, Vicious_Strike),
+        (62, 100, Bufudyne),
+        (65, 100, Sexy_Dance),
+        (72, 100, Akasha_Arts),
+        (75, 100, Brave_Blade)
+]
