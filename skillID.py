@@ -1,32 +1,28 @@
-# Vanilla skills (only the used ones)
+# Vanilla skills
 Agi = "001"
 Agilao = "002"
 Agidyne = "003"
 Maragi = "004"
 Maragion = "005"
 Maragidyne = "006"
-Ragnarok = "009"  # used in New Moon
 Garu = "00A"
 Garula = "00B"
 Garudyne = "00C"
 Magaru = "00D"
 Magarula = "00E"
 Magarudyne = "00F"
-Panta_Rhei = "012"  # used in New Moon
 Bufu = "013"
 Bufula = "014"
 Bufudyne = "015"
 Mabufu = "016"
 Mabufula = "017"
 Mabufudyne = "018"
-Niflheim = "01B"  # used in New Moon
 Zio = "01C"
 Zionga = "01D"
 Ziodyne = "01E"
 Mazio = "01F"
 Mazionga = "020"
 Maziodyne = "021"
-Thunder_Reign = "024"  # used in New Moon
 Hama = "02D"
 Mahama = "02E"
 Hamaon = "02F"
@@ -50,11 +46,9 @@ Akasha_Arts = "077"
 Gods_Hand = "078"
 Cleave = "079"
 Fatal_End = "07A"
-Mighty_Swing = "07D"  # used in New Moon
 Double_Fangs = "07E"
 Blade_of_Fury = "07F"
 Deathbound = "080"
-Heavens_Blade = "082"  # used in New Moon
 Brave_Blade = "086"
 Herculean_Strike = "087"
 Vicious_Strike = "088"
@@ -74,7 +68,6 @@ Mediarahan = "0C5"
 Patra = "0C7"
 Me_Patra = "0C8"
 Re_Patra = "0C9"
-Amrita = "0CB"  # used in New Moon
 Recarm = "0CC"
 Samarecarm = "0CD"
 Tarunda = "0CE"
@@ -97,8 +90,6 @@ Fire_Break = "0E5"
 Ice_Break = "0E6"
 Wind_Break = "0E7"
 Charmdi = "0ED"
-
-# Vanilla passives
 Fire_Boost = "210"
 Fire_Amp = "211"
 Ice_Boost = "212"
@@ -110,10 +101,6 @@ Counterstrike = "221"
 High_Counter = "222"
 Regenerate1 = "223"
 Regenerate2 = "224"
-Regenerate3 = "225"  # used in New Moon
-Apt_Pupil = "232"  # used in New Moon
-Magic_Skill_Up = "23E"  # used in New Moon
-Phys_Skill_Up = "23F"  # used in New Moon
 Spear_Master = "246"
 Fist_Master = "24A"
 Hama_Boost = "257"
@@ -121,7 +108,27 @@ Mudo_Boost = "258"
 Spring_of_Life = "25F"
 
 # New Moon skills
+Ragnarok = "009"
+Panta_Rhei = "012"
+Niflheim = "01B"
+Thunder_Reign = "024"
+Mighty_Swing = "07D"
+Heavens_Blade = "082"
+Amrita = "0CB"
+Rebellion = "0E2"
+Regenerate3 = "225"
+Magic_Skill_Up = "23E"
+Phys_Skill_Up = "23F"
+
+
+# Custom Skills
 Sanctify = "031"
 Desecrate = "037"
 Heat_Riser = "0EF"
 Debilitate = "0F0"
+Mortal_Folly = "098"
+Allure = "0F3"
+Evil_Laugh = "0F4"
+Goddess_Shield = "0F7"
+Gemini = "0F8"
+Intoxicate = "0F9"

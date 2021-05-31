@@ -8,6 +8,7 @@ aigSkills = []
 koroSkills = []
 kenSkills = []
 shinSkills = []
+metSkills = []
 
 # Python 2.7 compatibility
 try:
@@ -38,48 +39,53 @@ else:
 
 # checks the level for each party member
 print("\nEnter the level of each party member. If you do not have the member, or want to skip them, enter '0'\n")
-yukLvl = int(input("Yukari: "))
+yukLv = int(input("Yukari: "))
 for (minLv, maxLv, skill) in yukari:
-    if(yukLvl >= minLv and yukLvl < maxLv):
+    if(yukLv >= minLv and yukLv < maxLv):
         yukSkills.append(skill)
 
-junLvl = int(input("Junpei: "))
+junLv = int(input("Junpei: "))
 for (minLv, maxLv, skill) in junpei:
-    if(junLvl >= minLv and junLvl < maxLv):
+    if(junLv >= minLv and junLv < maxLv):
         junSkills.append(skill)
 
-akiLvl = int(input("Akihiko: "))
+akiLv = int(input("Akihiko: "))
 for (minLv, maxLv, skill) in akihiko:
-    if(akiLvl >= minLv and akiLvl < maxLv):
+    if(akiLv >= minLv and akiLv < maxLv):
         akiSkills.append(skill)
 
-mitLvl = int(input("Mitsuru: "))
+mitLv = int(input("Mitsuru: "))
 for (minLv, maxLv, skill) in mitsuru:
-    if(mitLvl >= minLv and mitLvl < maxLv):
+    if(mitLv >= minLv and mitLv < maxLv):
         mitSkills.append(skill)
 
 if gameCheck in ["J", "j"]:
-    aigLvl = int(input("Aigis: "))
+    aigLv = int(input("Aigis: "))
     for (minLv, maxLv, skill) in aigis:
-        if(aigLvl >= minLv and aigLvl < maxLv):
+        if(aigLv >= minLv and aigLv < maxLv):
             aigSkills.append(skill)
 
-koroLvl = int(input("Koromaru: "))
+koroLv = int(input("Koromaru: "))
 for (minLv, maxLv, skill) in koromaru:
-    if(koroLvl >= minLv and koroLvl < maxLv):
+    if(koroLv >= minLv and koroLv < maxLv):
         koroSkills.append(skill)
 
 
-kenLvl = int(input("Ken: "))
+kenLv = int(input("Ken: "))
 for (minLv, maxLv, skill) in ken:
-    if(kenLvl >= minLv and kenLvl < maxLv):
+    if(kenLv >= minLv and kenLv < maxLv):
         kenSkills.append(skill)
 
 if gameCheck in ["J", "j"]:
-    shinLvl = int(input("Shinjiro: "))
+    shinLv = int(input("Shinjiro: "))
     for (minLv, maxLv, skill) in shinjiro:
-        if(shinLvl >= minLv and shinLvl < maxLv):
+        if(shinLv >= minLv and shinLv < maxLv):
             shinSkills.append(skill)
+elif gameCheck in ["A", "a"]:
+    metLv = int(input("Metis: "))
+    for (minLv, maxLv, skill) in metis:
+        if(metLv >= minLv and metLv < maxLv):
+            metSkills.append(skill)
 
 # Creates/ overwrites the pnach file
 with open("94A82AAA_partySkills.pnach", "w") as overwrite:
@@ -187,7 +193,7 @@ with open("94A82AAA_partySkills.pnach", "a") as pnach:
                             format(8607056 + (count * 2), "x") + ",short,0000")
                 count += 1
     
-    #Shinjiro
+    #Shinjiro and Metis
         if gameCheck in ["J", "j"]:
             count = 0
             while count < len(shinSkills):
@@ -199,6 +205,19 @@ with open("94A82AAA_partySkills.pnach", "a") as pnach:
             if count != 0:
                 while count < 8:
                     pnach.write("\n//Shinjiro Persona Skill " + (str(count + 1)).upper() + "\npatch=1,EE,00" +
+                                format(8607924 + (count * 2), "x") + ",short,0000")
+                    count += 1
+        elif gameCheck in ["A", "a"]:
+            count = 0
+            while count < len(metSkills):
+                if count == 0:
+                    pnach.write("\n\n//Metis skills")
+                pnach.write("\n//Metis Persona Skill " + (str(count + 1)).upper() + "\npatch=1,EE,00" +
+                            format(8607924 + (count * 2), "x") + ",short,0" + metSkills[count])
+                count += 1
+            if count != 0:
+                while count < 8:
+                    pnach.write("\n//Metis Persona Skill " + (str(count + 1)).upper() + "\npatch=1,EE,00" +
                                 format(8607924 + (count * 2), "x") + ",short,0000")
                     count += 1
 
