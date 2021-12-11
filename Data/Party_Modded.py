@@ -1,4 +1,4 @@
-from Data.Skill_IDs import *
+from skillID import *
 
 yukari = [
         (1, 25, Dia),
