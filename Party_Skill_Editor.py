@@ -24,33 +24,35 @@ gameType = gameType.get()
 modCheck = modCheck.get()
 if gameType == 'J':
     if modCheck == 'V':
-        from Skill_Progressions.Party_Unmodded import *
+        from Data.Party_Unmodded import *
+       # from Data.Levels_Unmodded import *
     elif modCheck == 'M':
-        from Skill_Progressions.Party_Modded import *
+        from Data.Party_Modded import *
 # Determines if Personas are evolved by checking the date inputted
     monthCheck = int(monthCheck.get())
     dayCheck = int(dayCheck.get())
     if monthCheck > 10 or monthCheck == 1 or monthCheck == 10 and dayCheck > 4:
-            akihiko = akihikoEv
-            ken = kenEv
+        akihiko = akihikoEv
+        ken = kenEv
     if monthCheck > 11 or monthCheck == 1 or monthCheck == 11 and dayCheck > 7:
-            yukari = yukariEv
+        yukari = yukariEv
     if monthCheck > 11 or monthCheck == 1 or monthCheck == 11 and dayCheck > 17:
-            mitsuru = mitsuruEv
+        mitsuru = mitsuruEv
     if monthCheck > 11 or monthCheck == 1 or monthCheck == 11 and dayCheck > 22:
-            junpei = junpeiEv
+        junpei = junpeiEv
     if monthCheck > 12 or monthCheck == 1 or monthCheck == 12 and dayCheck > 29:
-            aigis = aigisEv
+        aigis = aigisEv
 # Displays an error message for invalid dates, but still creates a cheat code
-    if monthCheck in [0,2,3] or monthCheck > 12:
+    if monthCheck in [0, 2, 3] or monthCheck > 12:
         errorMessage = 2
     if dayCheck == 0 or dayCheck > 31:
         errorMessage = 2
 elif gameType == 'A':
     if modCheck == 'V':
-        from Skill_Progressions.Party_Unmodded_A import *
+        from Data.Party_Unmodded_A import *
+      #  from Data.Levels_Unmodded_A import *
     elif modCheck == 'M':
-        from Skill_Progressions.Party_Modded_A import *
+        from Data.Party_Modded_A import *
 else:
     errorMessage = 1
 
@@ -108,8 +110,8 @@ if errorMessage != 1:
     with open("94A82AAA_partySkills.pnach", "w") as overwrite:
         overwrite.write("Persona 3 FES Party Skill Overwrite")
 
-    with open("94A82AAA_partySkills.pnach", "a") as pnach:
 # Writes the first (and only) eight skills to the file
+    with open("94A82AAA_partySkills.pnach", "a") as pnach:
 # Yukari
         count = 0
         while count < len(yukSkills):
