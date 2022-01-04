@@ -122,8 +122,11 @@ Phys_Skill_Up = "23F"
 
 
 # Custom Skills
+Twilight = "011"
+Energy_Drain = "01A"
 Sanctify = "031"
 Desecrate = "037"
+Unbridled_Rage = "099"
 Heat_Riser = "0EF"
 Debilitate = "0F0"
 Mortal_Folly = "098"
@@ -132,3 +135,6 @@ Evil_Laugh = "0F4"
 Goddess_Shield = "0F7"
 Gemini = "0F8"
 Intoxicate = "0F9"
+Retribution = "0FC"
+Resolve = "0FD"
+Fleet_Foot = "0FF"
