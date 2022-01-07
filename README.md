@@ -13,7 +13,7 @@ Instructions:
 
 -Follow the instructions given by the program
 
--Drag the created cheat code folder into your cheat code loader of choice (for PCSX2 it's the cheats folder)
+-Drag the created cheat code folder into your cheat code loader of choice (for PCSX2, place it in the "cheats" folder)
 
 
 The program will then spit out a cheat code document, containing the skills that each party member should have at the level provided in the
