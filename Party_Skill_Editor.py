@@ -192,7 +192,7 @@ if errorMessage != 1:
         count = 0
         while count < len(akiSkills):
             if count == 0:
-                pnach.write("\n\n//Akihiko skills (Level {akiLv})")
+                pnach.write(f"\n\n//Akihiko skills (Level {akiLv})")
             pnach.write(f"\n//Persona Skill {str(count + 1)} \npatch=1,EE,00"
                         f"{format(8606188 + (count * 2), 'x').upper()},short,0{akiSkills[count]}")
             count += 1
@@ -226,7 +226,7 @@ if errorMessage != 1:
         count = 0
         while count < len(mitSkills):
             if count == 0:
-                pnach.write("\n\n//Mitsuru skills (Level {mitLv})")
+                pnach.write(f"\n\n//Mitsuru skills (Level {mitLv})")
             pnach.write(f"\n//Persona Skill {str(count + 1)}\npatch=1,EE,00"
                         f"{format(8603584 + (count * 2), 'x').upper()},short,0{mitSkills[count]}")
             count += 1
@@ -261,7 +261,7 @@ if errorMessage != 1:
             count = 0
             while count < len(aigSkills):
                 if count == 0:
-                    pnach.write("\n\n//Aigis skills (Level {aigLv})")
+                    pnach.write(f"\n\n//Aigis skills (Level {aigLv})")
                 pnach.write(f"\n//Persona Skill {str(count + 1)}\npatch=1,EE,00"
                             f"{format(8602716 + (count * 2), 'x').upper()},short,0{aigSkills[count]}")
                 count += 1
@@ -295,7 +295,7 @@ if errorMessage != 1:
         count = 0
         while count < len(koroSkills):
             if count == 0:
-                pnach.write("\n\n//Koromaru skills (Level {koroLv})")
+                pnach.write(f"\n\n//Koromaru skills (Level {koroLv})")
             pnach.write(f"\n//Persona Skill {str(count + 1)}\npatch=1,EE,00"
                         f"{format(8608792 + (count * 2), 'x').upper()},short,0{koroSkills[count]}")
             count += 1
@@ -329,7 +329,7 @@ if errorMessage != 1:
         count = 0
         while count < len(kenSkills):
             if count == 0:
-                pnach.write("\n\n//Ken skills (Level {kenLv})")
+                pnach.write(f"\n\n//Ken skills (Level {kenLv})")
             pnach.write(f"\n//Persona Skill {str(count + 1)}\npatch=1,EE,00"
                         f"{format(8607056 + (count * 2), 'x').upper()},short,0{kenSkills[count]}")
             count += 1
@@ -364,7 +364,7 @@ if errorMessage != 1:
             count = 0
             while count < len(shinSkills):
                 if count == 0:
-                    pnach.write("\n\n//Shinjiro skills (Level {shinLv})")
+                    pnach.write(f"\n\n//Shinjiro skills (Level {shinLv})")
                 pnach.write(f"\n//Persona Skill {str(count + 1)}\npatch=1,EE,00"
                             f"{format(8607924 + (count * 2), 'x').upper()},short,0{shinSkills[count]}")
                 count += 1
@@ -399,7 +399,7 @@ if errorMessage != 1:
             count = 0
             while count < len(metSkills):
                 if count == 0:
-                    pnach.write("\n\n//Metis skills (Level {metLv})")
+                    pnach.write(f"\n\n//Metis skills (Level {metLv})")
                 pnach.write(f"\n//Persona Skill {str(count + 1)}\npatch=1,EE,00"
                             f"{format(8607924 + (count * 2), 'x').upper()},short,0{metSkills[count]}")
                 count += 1
