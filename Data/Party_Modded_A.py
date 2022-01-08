@@ -26,7 +26,7 @@ junpei = [
         (1, 100, Spring_of_Life),
         (1, 62, Agilao),
         (1, 50, Re_Patra),
-        (1, 38, Rakukaja),
+        (1, 38, Tarunda),
         (1, 40, Double_Fangs),
         (1, 55, Kill_Rush),
         (1, 45, Counter),
