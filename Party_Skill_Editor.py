@@ -149,10 +149,25 @@ if errorMessage != 1:
                     Luck += Luc
 
             pnach.write(f"\n\n//Yukari Stats\n//Strength: {str(Strength)}\t\tMagic: {str(Magic)}\t\tEndurance: "
-                        f"{str(Endurance)}\t\tAgility: {str(Agility)}\t\tLuck: {str(Luck)}\npatch=1,EE,20834108,"
-                        f"extended,{format(Agility, 'x').upper()}{format(Endurance, 'x').upper()}"
-                        f"{format(Magic, 'x').upper()}{format(Strength, 'x').upper()}\npatch=1,EE,0083410C,"
-                        f"extended,000000{format(Luck, 'x').upper()}")
+                        f"{str(Endurance)}\t\tAgility: {str(Agility)}\t\tLuck: {str(Luck)}\npatch=1,EE,20834108,")
+
+            Strength = format(Strength, 'x').upper()
+            if len(Strength) < 2:
+                Strength = "0" + Strength
+            Magic = format(Magic, 'x').upper()
+            if len(Magic) < 2:
+                Magic = "0" + Magic
+            Endurance = format(Endurance, 'x').upper()
+            if len(Endurance) < 2:
+                Endurance = "0" + Endurance
+            Agility = format(Agility, 'x').upper()
+            if len(Agility) < 2:
+                Agility = "0" + Agility
+            Luck = format(Luck, 'x').upper()
+            if len(Luck) < 2:
+                Luck = "0" + Luck
+
+            pnach.write(f"extended,{Agility}{Endurance}{Magic}{Strength}\npatch=1,EE,0083410C,extended,000000{Luck}")
 
         # Junpei
         count = 0
@@ -183,10 +198,25 @@ if errorMessage != 1:
                     Luck += Luc
 
             pnach.write(f"\n\n//Junpei Stats\n//Strength: {str(Strength)}\t\tMagic: {str(Magic)}\t\tEndurance: "
-                        f"{str(Endurance)}\t\tAgility: {str(Agility)}\t\tLuck: {str(Luck)}\npatch=1,EE,20834B34,"
-                        f"extended,{format(Agility, 'x').upper()}{format(Endurance, 'x').upper()}"
-                        f"{format(Magic, 'x').upper()}{format(Strength, 'x').upper()}\npatch=1,EE,00834B38,"
-                        f"extended,000000{format(Luck, 'x').upper()}")
+                        f"{str(Endurance)}\t\tAgility: {str(Agility)}\t\tLuck: {str(Luck)}\npatch=1,EE,20834B34,")
+
+            Strength = format(Strength, 'x').upper()
+            if len(Strength) < 2:
+                Strength = "0" + Strength
+            Magic = format(Magic, 'x').upper()
+            if len(Magic) < 2:
+                Magic = "0" + Magic
+            Endurance = format(Endurance, 'x').upper()
+            if len(Endurance) < 2:
+                Endurance = "0" + Endurance
+            Agility = format(Agility, 'x').upper()
+            if len(Agility) < 2:
+                Agility = "0" + Agility
+            Luck = format(Luck, 'x').upper()
+            if len(Luck) < 2:
+                Luck = "0" + Luck
+
+            pnach.write(f"extended,{Agility}{Endurance}{Magic}{Strength}\npatch=1,EE,00834B38,extended,000000{Luck}")
 
         # Akihiko
         count = 0
@@ -217,10 +247,26 @@ if errorMessage != 1:
                     Luck += Luc
 
             pnach.write(f"\n\n//Akihiko Stats\n//Strength: {str(Strength)}\t\tMagic: {str(Magic)}\t\tEndurance: "
-                        f"{str(Endurance)}\t\tAgility: {str(Agility)}\t\tLuck: {str(Luck)}\npatch=1,EE,208351FC,"
-                        f"extended,{format(Agility, 'x').upper()}{format(Endurance, 'x').upper()}"
-                        f"{format(Magic, 'x').upper()}{format(Strength, 'x').upper()}\npatch=1,EE,00835200,"
-                        f"extended,000000{format(Luck, 'x').upper()}")
+                        f"{str(Endurance)}\t\tAgility: {str(Agility)}\t\tLuck: {str(Luck)}\npatch=1,EE,208351FC,")
+
+            Strength = format(Strength, 'x').upper()
+            if len(Strength) < 2:
+                Strength = "0" + Strength
+            Magic = format(Magic, 'x').upper()
+            if len(Magic) < 2:
+                Magic = "0" + Magic
+            Endurance = format(Endurance, 'x').upper()
+            if len(Endurance) < 2:
+                Endurance = "0" + Endurance
+            Agility = format(Agility, 'x').upper()
+            if len(Agility) < 2:
+                Agility = "0" + Agility
+            Luck = format(Luck, 'x').upper()
+            if len(Luck) < 2:
+                Luck = "0" + Luck
+
+            pnach.write(f"extended,{Agility}{Endurance}{Magic}{Strength}\npatch=1,EE,00835200,extended,000000{Luck}")
+
 
         # Mitsuru
         count = 0
@@ -251,10 +297,25 @@ if errorMessage != 1:
                     Luck += Luc
 
             pnach.write(f"\n\n//Mitsuru Stats\n//Strength: {str(Strength)}\t\tMagic: {str(Magic)}\t\tEndurance: "
-                        f"{str(Endurance)}\t\tAgility: {str(Agility)}\t\tLuck: {str(Luck)}\npatch=1,EE,208347D0,"
-                        f"extended,{format(Agility, 'x').upper()}{format(Endurance, 'x').upper()}"
-                        f"{format(Magic, 'x').upper()}{format(Strength, 'x').upper()}\npatch=1,EE,008347D4,"
-                        f"extended,000000{format(Luck, 'x').upper()}")
+                        f"{str(Endurance)}\t\tAgility: {str(Agility)}\t\tLuck: {str(Luck)}\npatch=1,EE,208347D0,")
+
+            Strength = format(Strength, 'x').upper()
+            if len(Strength) < 2:
+                Strength = "0" + Strength
+            Magic = format(Magic, 'x').upper()
+            if len(Magic) < 2:
+                Magic = "0" + Magic
+            Endurance = format(Endurance, 'x').upper()
+            if len(Endurance) < 2:
+                Endurance = "0" + Endurance
+            Agility = format(Agility, 'x').upper()
+            if len(Agility) < 2:
+                Agility = "0" + Agility
+            Luck = format(Luck, 'x').upper()
+            if len(Luck) < 2:
+                Luck = "0" + Luck
+
+            pnach.write(f"extended,{Agility}{Endurance}{Magic}{Strength}\npatch=1,EE,008347D4,extended,000000{Luck}")
 
         # Aigis
         if gameType == 'J':
@@ -286,10 +347,25 @@ if errorMessage != 1:
                         Luck += Luc
 
                 pnach.write(f"\n\n//Aigis Stats\n//Strength: {str(Strength)}\t\tMagic: {str(Magic)}\t\tEndurance: "
-                            f"{str(Endurance)}\t\tAgility: {str(Agility)}\t\tLuck: {str(Luck)}\npatch=1,EE,2083446C,"
-                            f"extended,{format(Agility, 'x').upper()}{format(Endurance, 'x').upper()}"
-                            f"{format(Magic, 'x').upper()}{format(Strength, 'x').upper()}\npatch=1,EE,00834470,"
-                            f"extended,000000{format(Luck, 'x').upper()}")
+                            f"{str(Endurance)}\t\tAgility: {str(Agility)}\t\tLuck: {str(Luck)}\npatch=1,EE,2083446C,")
+
+                Strength = format(Strength, 'x').upper()
+                if len(Strength) < 2:
+                    Strength = "0" + Strength
+                Magic = format(Magic, 'x').upper()
+                if len(Magic) < 2:
+                    Magic = "0" + Magic
+                Endurance = format(Endurance, 'x').upper()
+                if len(Endurance) < 2:
+                    Endurance = "0" + Endurance
+                Agility = format(Agility, 'x').upper()
+                if len(Agility) < 2:
+                    Agility = "0" + Agility
+                Luck = format(Luck, 'x').upper()
+                if len(Luck) < 2:
+                    Luck = "0" + Luck
+                
+                pnach.write(f"extended,{Agility}{Endurance}{Magic}{Strength}\npatch=1,EE,00834470,extended,000000{Luck}")
 
         # Koromaru
         count = 0
@@ -320,10 +396,25 @@ if errorMessage != 1:
                     Luck += Luc
 
             pnach.write(f"\n//Koromaru Stats\n//Strength: {str(Strength)}\t\tMagic: {str(Magic)}\t\tEndurance: "
-                        f"{str(Endurance)}\t\tAgility: {str(Agility)}\t\tLuck: {str(Luck)}\npatch=1,EE,20835C28,"
-                        f"extended,{format(Agility, 'x').upper()}{format(Endurance, 'x').upper()}"
-                        f"{format(Magic, 'x').upper()}{format(Strength, 'x').upper()}\npatch=1,EE,00835C2C,"
-                        f"extended,000000{format(Luck, 'x').upper()}")
+                        f"{str(Endurance)}\t\tAgility: {str(Agility)}\t\tLuck: {str(Luck)}\npatch=1,EE,20835C28,")
+
+            Strength = format(Strength, 'x').upper()
+            if len(Strength) < 2:
+                Strength = "0" + Strength
+            Magic = format(Magic, 'x').upper()
+            if len(Magic) < 2:
+                Magic = "0" + Magic
+            Endurance = format(Endurance, 'x').upper()
+            if len(Endurance) < 2:
+                Endurance = "0" + Endurance
+            Agility = format(Agility, 'x').upper()
+            if len(Agility) < 2:
+                Agility = "0" + Agility
+            Luck = format(Luck, 'x').upper()
+            if len(Luck) < 2:
+                Luck = "0" + Luck
+            
+            pnach.write(f"extended,{Agility}{Endurance}{Magic}{Strength}\npatch=1,EE,00835C2C,extended,000000{Luck}")
 
         # Ken
         count = 0
@@ -354,10 +445,25 @@ if errorMessage != 1:
                     Luck += Luc
 
             pnach.write(f"\n\n//Ken Stats\n//Strength: {str(Strength)}\t\tMagic: {str(Magic)}\t\tEndurance: "
-                        f"{str(Endurance)}\t\tAgility: {str(Agility)}\t\tLuck: {str(Luck)}\npatch=1,EE,20835560,"
-                        f"extended,{format(Agility, 'x').upper()}{format(Endurance, 'x').upper()}"
-                        f"{format(Magic, 'x').upper()}{format(Strength, 'x').upper()}\npatch=1,EE,00835564,"
-                        f"extended,000000{format(Luck, 'x').upper()}")
+                        f"{str(Endurance)}\t\tAgility: {str(Agility)}\t\tLuck: {str(Luck)}\npatch=1,EE,20835560,")
+            
+            Strength = format(Strength, 'x').upper()
+            if len(Strength) < 2:
+                Strength = "0" + Strength
+            Magic = format(Magic, 'x').upper()
+            if len(Magic) < 2:
+                Magic = "0" + Magic
+            Endurance = format(Endurance, 'x').upper()
+            if len(Endurance) < 2:
+                Endurance = "0" + Endurance
+            Agility = format(Agility, 'x').upper()
+            if len(Agility) < 2:
+                Agility = "0" + Agility
+            Luck = format(Luck, 'x').upper()
+            if len(Luck) < 2:
+                Luck = "0" + Luck
+            
+            pnach.write(f"extended,{Agility}{Endurance}{Magic}{Strength}\npatch=1,EE,00835564,extended,000000{Luck}")
         
         # Shinjiro
         if gameType == 'J':
@@ -389,10 +495,25 @@ if errorMessage != 1:
                         Luck += Luc
 
                 pnach.write(f"\n\n//Shinjiro Stats\n//Strength: {str(Strength)}\t\tMagic: {str(Magic)}\t\tEndurance: "
-                            f"{str(Endurance)}\t\tAgility: {str(Agility)}\t\tLuck: {str(Luck)}\npatch=1,EE,208358C4,"
-                            f"extended,{format(Agility, 'x').upper()}{format(Endurance, 'x').upper()}"
-                            f"{format(Magic, 'x').upper()}{format(Strength, 'x').upper()}\npatch=1,EE,008358C8,"
-                            f"extended,000000{format(Luck, 'x').upper()}")
+                            f"{str(Endurance)}\t\tAgility: {str(Agility)}\t\tLuck: {str(Luck)}\npatch=1,EE,208358C4,")
+
+                Strength = format(Strength, 'x').upper()
+                if len(Strength) < 2:
+                    Strength = "0" + Strength
+                Magic = format(Magic, 'x').upper()
+                if len(Magic) < 2:
+                    Magic = "0" + Magic
+                Endurance = format(Endurance, 'x').upper()
+                if len(Endurance) < 2:
+                    Endurance = "0" + Endurance
+                Agility = format(Agility, 'x').upper()
+                if len(Agility) < 2:
+                    Agility = "0" + Agility
+                Luck = format(Luck, 'x').upper()
+                if len(Luck) < 2:
+                    Luck = "0" + Luck
+                
+                pnach.write(f"extended,{Agility}{Endurance}{Magic}{Strength}\npatch=1,EE,008358C8,extended,000000{Luck}")
 
         # Metis
         elif gameType == 'A':
@@ -424,10 +545,25 @@ if errorMessage != 1:
                         Luck += Luc
 
                 pnach.write(f"\n\n//Metis Stats\n//Strength: {str(Strength)}\t\tMagic: {str(Magic)}\t\tEndurance: "
-                            f"{str(Endurance)}\t\tAgility: {str(Agility)}\t\tLuck: {str(Luck)}\npatch=1,EE,208358C4,"
-                            f"extended,{format(Agility, 'x').upper()}{format(Endurance, 'x').upper()}"
-                            f"{format(Magic, 'x').upper()}{format(Strength, 'x').upper()}\npatch=1,EE,008358C8,"
-                            f"extended,000000{format(Luck, 'x').upper()}")
+                            f"{str(Endurance)}\t\tAgility: {str(Agility)}\t\tLuck: {str(Luck)}\npatch=1,EE,208358C4,")
+
+                Strength = format(Strength, 'x').upper()
+                if len(Strength) < 2:
+                    Strength = "0" + Strength
+                Magic = format(Magic, 'x').upper()
+                if len(Magic) < 2:
+                    Magic = "0" + Magic
+                Endurance = format(Endurance, 'x').upper()
+                if len(Endurance) < 2:
+                    Endurance = "0" + Endurance
+                Agility = format(Agility, 'x').upper()
+                if len(Agility) < 2:
+                    Agility = "0" + Agility
+                Luck = format(Luck, 'x').upper()
+                if len(Luck) < 2:
+                    Luck = "0" + Luck
+
+                pnach.write(f"extended,{Agility}{Endurance}{Magic}{Strength}\npatch=1,EE,008358C8,extended,000000{Luck}")
 
 # Calls another window to display results
 root = Tk()
