@@ -37,7 +37,7 @@ junpei = [
         (58, 100, High_Counter),
         (62, 100, Agidyne),
         (65, 100, Brave_Blade),
-        (70, 100, Power_Charge),
+        (66, 100, Power_Charge),
         (74, 100, Vorpal_Blade_Answer)
 ]
 
@@ -130,7 +130,7 @@ metis = [
         (1, 100, Dekaja),
         (1, 58, Garula),
         (1, 48, Fatal_End),
-        (1, 37, Rakukaja),
+        (26, 37, Rakukaja),
         (29, 50, Marin_Karin),
         (34, 62, Bufula),
         (37, 66, Marakukaja),

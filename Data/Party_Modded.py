@@ -76,7 +76,7 @@ junpeiEv = [
         (58, 100, High_Counter),
         (62, 100, Agidyne),
         (65, 100, Brave_Blade),
-        (70, 100, Power_Charge),
+        (66, 100, Power_Charge),
         (74, 100, Vorpal_Blade)
 ]
 
@@ -249,7 +249,7 @@ shinjiro = [
         (1, 58, Regenerate1),
         (1, 42, Counter),
         (1, 62, Fatal_End),
-        (1, 74, Unbridled_Rage),
+        (38, 74, Unbridled_Rage),
         (39, 66, Evil_Smile),
         (42, 55, Counterstrike),
         (46, 100, Power_Charge),
