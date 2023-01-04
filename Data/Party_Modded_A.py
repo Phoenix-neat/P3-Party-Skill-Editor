@@ -9,17 +9,16 @@ yukari = [
         (1, 52, Diarama),
         (26, 48, Me_Patra),
         (28, 68, Recarm),
-        (32, 54, Garula),
+        (32, 57, Garula),
         (43, 74, Mediarama),
         (46, 65, Magarula),
         (48, 100, Amrita),
         (52, 100, Diarahan),
-        (54, 80, Garudyne),
+        (57, 100, Garudyne),
         (60, 100, Wind_Break),
         (65, 100, Magarudyne),
         (68, 100, Samarecarm),
-        (74, 100, Mediarahan),
-        (80, 100, Panta_Rhei)
+        (74, 100, Mediarahan)
 ]
 
 junpei = [
@@ -31,16 +30,15 @@ junpei = [
         (1, 55, Kill_Rush),
         (1, 45, Counter),
         (38, 100, Matarunda),
-        (40, 65, Torrent_Shot),
+        (40, 70, Torrent_Shot),
         (45, 58, Counterstrike),
-        (50, 75, Blade_of_Fury),
-        (55, 70, Gigantic_Fist),
+        (50, 74, Blade_of_Fury),
+        (55, 100, Gigantic_Fist),
         (58, 100, High_Counter),
-        (60, 100, Phys_Skill_Up),
         (62, 100, Agidyne),
         (65, 100, Brave_Blade),
         (70, 100, Power_Charge),
-        (75, 100, Vorpal_Blade_Answer),
+        (74, 100, Vorpal_Blade_Answer)
 ]
 
 akihiko = [
@@ -52,18 +50,17 @@ akihiko = [
         (1, 60, Sukunda),
         (31, 57, Zionga),
         (36, 63, Diarama),
-        (39, 76, Elec_Boost),
-        (41, 74, Mazionga),
+        (40, 72, Mazionga),
+        (42, 74, Elec_Boost),
         (44, 100, Dekunda),
         (47, 66, Marakunda),
         (50, 100, Fist_Master),
-        (57, 80, Ziodyne),
+        (57, 100, Ziodyne),
         (60, 100, Debilitate),
         (63, 100, Diarahan),
         (66, 100, Gemini),
-        (74, 100, Maziodyne),
-        (76, 100, Elec_Amp),
-        (80, 100, Thunder_Reign)
+        (72, 100, Maziodyne),
+        (74, 100, Elec_Amp)
 ]
 
 mitsuru = [
@@ -73,17 +70,17 @@ mitsuru = [
         (1, 58, Diarama),
         (1, 52, Spirit_Drain),
         (1, 65, Tentarafoo),
+        (37, 74, Ice_Boost),
         (40, 71, Mabufula),
-        (43, 76, Ice_Boost),
         (48, 100, Mind_Charge),
         (52, 100, Energy_Drain),
-        (55, 80, Bufudyne),
+        (55, 67, Bufudyne),
         (58, 100, Diarahan),
         (61, 100, Ice_Break),
         (65, 100, Intoxicate),
+        (67, 100, Waning_Crescent),
         (71, 100, Mabufudyne),
-        (76, 100, Ice_Amp),
-        (80, 100, Niflheim)
+        (74, 100, Ice_Amp)
 ]
 
 koromaru = [
@@ -92,19 +89,19 @@ koromaru = [
         (1, 50, Sukukaja),
         (36, 70, Maragion),
         (37, 65, Mighty_Swing),
+        (39, 74, Fire_Boost),
         (40, 71, Mudoon),
-        (41, 76, Fire_Boost),
         (42, 49, Mamudo),
         (45, 55, Masukukaja),
         (49, 100, Mamudoon),
-        (51, 80, Agidyne),
+        (51, 68, Agidyne),
         (54, 100, Desecrate),
         (55, 100, Fleet_Foot),
         (60, 100, Fire_Break),
-        (65, 100, Heavens_Blade),
+        (65, 100, Rend),
+        (68, 100, Pyriphlegethon),
         (70, 100, Maragidyne),
-        (76, 100, Fire_Amp),
-        (80, 100, Ragnarok)
+        (74, 100, Fire_Amp)
 ]
 
 ken = [
@@ -117,7 +114,7 @@ ken = [
         (32, 71, Recarm),
         (37, 52, Hamaon),
         (42, 63, Retribution),
-        (47, 76, Mediarama),
+        (47, 74, Mediarama),
         (50, 65, Vile_Assault),
         (52, 100, Sanctify),
         (55, 100, Ziodyne),
@@ -126,7 +123,7 @@ ken = [
         (63, 100, Resolve),
         (65, 100, Primal_Force),
         (71, 100, Samarecarm),
-        (76, 100, Mediarahan)
+        (74, 100, Mediarahan)
 ]
 
 metis = [
@@ -139,7 +136,7 @@ metis = [
         (37, 66, Marakukaja),
         (40, 100, Power_Charge),
         (45, 60, Herculean_Strike),
-        (48, 75, Gigantic_Fist),
+        (48, 74, Gigantic_Fist),
         (50, 65, Sexy_Dance),
         (58, 100, Garudyne),
         (60, 72, Vicious_Strike),
@@ -147,5 +144,5 @@ metis = [
         (64, 100, Allure),
         (66, 100, Goddess_Shield),
         (72, 100, Akasha_Arts),
-        (75, 100, Gods_Hand)
+        (74, 100, Gods_Hand)
 ]
