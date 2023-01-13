@@ -123,7 +123,7 @@ Phys_Skill_Up = "23F"
 
 # Custom Skills
 Twilight = "011"
-Energy_Drain = "01A"
+Acquiesce = "01A"
 Sanctify = "031"
 Desecrate = "037"
 Unbridled_Rage = "099"

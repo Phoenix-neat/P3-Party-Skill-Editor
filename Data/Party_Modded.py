@@ -128,7 +128,7 @@ mitsuru = [
         (37, 100, Ice_Boost),
         (40, 100, Mabufula),
         (48, 100, Mind_Charge),
-        (52, 100, Energy_Drain),
+        (52, 100, Acquiesce),
         (55, 100, Bufudyne)
 ]
 
@@ -144,7 +144,7 @@ mitsuruEv = [
         (37, 74, Ice_Boost),
         (40, 71, Mabufula),
         (48, 100, Mind_Charge),
-        (52, 100, Energy_Drain),
+        (52, 100, Acquiesce),
         (55, 67, Bufudyne),
         (58, 100, Diarahan),
         (61, 100, Ice_Break),
@@ -214,7 +214,7 @@ koromaru = [
 ]
 
 ken = [
-        (1, 37, Hama),
+        (1, 40, Hama),
         (1, 100, Cruel_Attack),
         (1, 100, Zionga),
         (37, 100, Diarama),
@@ -225,13 +225,13 @@ ken = [
 ]
 
 kenEv = [
-        (1, 37, Hama),
+        (1, 40, Hama),
         (1, 50, Cruel_Attack),
         (1, 55, Zionga),
-        (37, 100, Diarama),
-        (38, 100, Media),
-        (39, 100, Recarm),
-        (40, 100, Hamaon),
+        (37, 60, Diarama),
+        (38, 42, Media),
+        (39, 71, Recarm),
+        (40, 52, Hamaon),
         (42, 63, Retribution),
         (47, 74, Mediarama),
         (50, 65, Vile_Assault),

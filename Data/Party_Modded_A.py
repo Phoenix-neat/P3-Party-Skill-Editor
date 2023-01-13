@@ -73,7 +73,7 @@ mitsuru = [
         (37, 74, Ice_Boost),
         (40, 71, Mabufula),
         (48, 100, Mind_Charge),
-        (52, 100, Energy_Drain),
+        (52, 100, Acquiesce),
         (55, 67, Bufudyne),
         (58, 100, Diarahan),
         (61, 100, Ice_Break),
@@ -105,8 +105,8 @@ koromaru = [
 ]
 
 ken = [
-        (1, 29, Dia),
-        (1, 35, Hama),
+        (1, 28, Dia),
+        (1, 37, Hama),
         (1, 50, Cruel_Attack),
         (1, 55, Zionga),
         (28, 60, Diarama),
