@@ -26,7 +26,7 @@ if gameType == 'J':
     if modCheck == 'V':
         from Data.Party_Unmodded import *
         from Data.Levels_Unmodded import *
-        patch_print = "Unmodded, The Journey"
+        patch_print = "No mods, The Journey"
     elif modCheck == 'M':
         from Data.Party_Modded import *
         from Data.Levels_Modded import *
@@ -54,7 +54,7 @@ elif gameType == 'A':
     if modCheck == 'V':
         from Data.Party_Unmodded_A import *
         from Data.Levels_Unmodded_A import *
-        patch_print = "Unmodded, The Answer"
+        patch_print = "No mods, The Answer"
     elif modCheck == 'M':
         from Data.Party_Modded_A import *
         from Data.Levels_Modded_A import *
@@ -90,11 +90,6 @@ if errorMessage != 1:
         if minLv <= mitLv < maxLv:
             mitSkills.append(skill)
 
-    if gameType == 'J':
-        for (minLv, maxLv, skill) in aigis:
-            if minLv <= aigLv < maxLv:
-                aigSkills.append(skill)
-
     for (minLv, maxLv, skill) in koromaru:
         if minLv <= koroLv < maxLv:
             koroSkills.append(skill)
@@ -104,6 +99,10 @@ if errorMessage != 1:
             kenSkills.append(skill)
 
     if gameType == 'J':
+        for (minLv, maxLv, skill) in aigis:
+            if minLv <= aigLv < maxLv:
+                aigSkills.append(skill)
+
         for (minLv, maxLv, skill) in shinjiro:
             if minLv <= shinLv < maxLv:
                 shinSkills.append(skill)
@@ -267,7 +266,6 @@ if errorMessage != 1:
 
             pnach.write(f"extended,{Agility}{Endurance}{Magic}{Strength}\npatch=1,EE,00835200,extended,000000{Luck}")
 
-
         # Mitsuru
         count = 0
         while count < len(mitSkills):
@@ -395,7 +393,7 @@ if errorMessage != 1:
                     Agility += Agi
                     Luck += Luc
 
-            pnach.write(f"\n//Koromaru Stats\n//Strength: {str(Strength)}\t\tMagic: {str(Magic)}\t\tEndurance: "
+            pnach.write(f"\n\n//Koromaru Stats\n//Strength: {str(Strength)}\t\tMagic: {str(Magic)}\t\tEndurance: "
                         f"{str(Endurance)}\t\tAgility: {str(Agility)}\t\tLuck: {str(Luck)}\npatch=1,EE,20835C28,")
 
             Strength = format(Strength, 'x').upper()
@@ -588,13 +586,13 @@ else:
         ttk.Label(mainframe, text="The Journey").grid(column=1, row=2, sticky=W)
 # Prints the date or an error message for an invalid date       
         if errorMessage == 2:
-            ttk.Label(mainframe, text="Invalid date. Personas may be unevolved").grid(column=1, row=3, sticky=W)
+            ttk.Label(mainframe, text="Invalid date. Personas may not have evolved").grid(column=1, row=3, sticky=W)
         else:
             ttk.Label(mainframe, text="Date entered: " + str(monthCheck) + "/" + str(dayCheck)).grid(
                 column=1, row=3, sticky=W)
 # Prints "Vanilla" or "New Moon" 
     if modCheck == 'V':
-        ttk.Label(mainframe, text="Vanilla (unmodded)").grid(column=1, row=4, sticky=W)
+        ttk.Label(mainframe, text="Vanilla (no mods)").grid(column=1, row=4, sticky=W)
     elif modCheck == 'M':
         ttk.Label(mainframe, text="New Moon (modded)").grid(column=1, row=4, sticky=W)
 # Prints out whichever characters have codes and the levels inputted for each
